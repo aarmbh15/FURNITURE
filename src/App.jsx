@@ -24,7 +24,7 @@ export default function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
-        <div className="bg-zinc-950 text-zinc-100 min-h-screen font-sans">
+        <div className="bg-[#F5F5F0] text-[#333333] min-h-screen font-sans">
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />

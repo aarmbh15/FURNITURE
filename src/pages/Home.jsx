@@ -1,3 +1,4 @@
+// Home.jsx
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Phone } from "lucide-react";
@@ -6,80 +7,82 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>AK Flooring & Furniture | Carpet & Flooring Experts in Coventry</title>
-        <meta 
-          name="description" 
-          content="Looking for reliable flooring in Coventry? AK Flooring & Furniture offers carpet installation, LVT, laminate, hardwood & commercial flooring with free quotes." 
+        <title>AK Flooring & Furniture | Warm Luxury Flooring & Beds in Coventry</title>
+        <meta
+          name="description"
+          content="Luxurious flooring and quality bedroom furniture in Coventry. Hardwood, carpet, LVT, laminate & premium beds and mattresses – expert installation."
         />
-        <meta name="keywords" content="flooring in coventry, carpet installation coventry, lvt flooring coventry, laminate flooring coventry, hardwood flooring coventry, commercial flooring coventry, residential flooring coventry" />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-cover bg-center" 
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')" }}>
-        <div className="absolute inset-0 bg-black/65"></div>
-        <div className="relative z-10 text-center px-6 max-w-5xl">
-          <h1 className="text-5xl md:text-7xl font-serif mb-6 leading-tight">
-            Trusted Flooring Experts<br />in Coventry
+      <section
+        className="relative min-h-[85vh] flex items-center bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')",
+        }}
+      >
+        <div className="absolute inset-0 bg-[#FBF6F0]/70"></div>
+
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 text-center md:text-left">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-[#3A2F2A] leading-tight mb-6">
+            Warm Luxury Flooring
+            <br className="hidden md:block" />
+            <span className="text-[#B08D57]">& Furniture</span>
           </h1>
-          <p className="text-xl md:text-2xl text-zinc-300 mb-10 max-w-3xl mx-auto">
-            Premium carpets, LVT, laminate, hardwood & commercial flooring — supplied and fitted to the highest standard.
+
+          <p className="text-xl md:text-2xl text-[#4F433C] mb-10 max-w-3xl">
+            Timeless elegance for your home — premium hardwood, soft carpets, durable LVT and luxurious bedroom furniture, all installed with care.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a href="/contact" className="bg-amber-700 hover:bg-amber-600 text-white px-10 py-5 rounded-full text-lg font-medium transition flex items-center justify-center gap-3">
-              <Phone size={20} /> Get Free Quote Today
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
+            <a
+              href="/contact"
+              className="bg-[#B08D57] hover:bg-[#8f6f44] text-white px-10 py-5 rounded-full text-lg font-medium transition flex items-center justify-center gap-3 shadow-md"
+            >
+              <Phone size={20} /> Get Free Quote
             </a>
-            <a href="/services" className="border-2 border-amber-500 hover:bg-amber-500/20 text-white px-10 py-5 rounded-full text-lg transition">
-              View All Flooring Services
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Trusted Experts Section – direct from PDF */}
-      <section className="py-24 px-6 bg-zinc-900">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-serif mb-10 text-center">Trusted Flooring Experts in Coventry</h2>
-          
-          <p className="text-lg text-zinc-300 leading-relaxed mb-8">
-            AK Flooring & Furniture is a trusted name for professional flooring in Coventry, delivering high-quality solutions for both residential and commercial spaces. With years of hands-on experience, we specialise in supplying and installing a wide range of flooring options that combine durability, style, and long-term value. Whether you are upgrading your home or fitting out a commercial property, our expert team ensures flawless results from start to finish.
-          </p>
-
-          <p className="text-lg text-zinc-300 leading-relaxed mb-8">
-            We understand that flooring is a major investment. That is why we focus on quality materials, precise installation, and honest advice tailored to your space and budget. From carpets and luxury vinyl tiles to laminate, hardwood, and commercial flooring, we provide complete flooring solutions under one roof.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-zinc-800 p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-serif mb-4">Residential Flooring</h3>
-              <p className="text-zinc-400">Beautiful, hard-wearing floors perfect for family homes across Coventry.</p>
-            </div>
-            <div className="bg-zinc-800 p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-serif mb-4">Commercial Flooring</h3>
-              <p className="text-zinc-400">Durable solutions designed for high-traffic shops, offices & public spaces.</p>
-            </div>
-            <div className="bg-zinc-800 p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-serif mb-4">Free Professional Advice</h3>
-              <p className="text-zinc-400">No-obligation quotes & expert guidance tailored to your needs.</p>
-            </div>
-          </div>
-
-          <div className="text-center mt-16">
-            <a href="/contact" className="inline-block bg-white text-black px-12 py-6 rounded-full text-xl font-medium hover:bg-amber-400 transition">
-              Book Your Free Consultation
+            <a
+              href="/services"
+              className="border-2 border-[#B08D57] text-[#3A2F2A] hover:bg-[#B08D57]/10 px-10 py-5 rounded-full text-lg font-medium transition flex items-center justify-center gap-3"
+            >
+              Explore Collections <ArrowRight size={18} />
             </a>
           </div>
         </div>
       </section>
 
-      {/* Quick CTA footer-style section */}
-      <section className="py-20 bg-black text-center px-6">
-        <h2 className="text-4xl font-serif mb-6">Ready to Upgrade Your Floors?</h2>
-        <p className="text-xl text-zinc-400 mb-10 max-w-3xl mx-auto">
-          Contact AK Flooring & Furniture today for expert flooring services in Coventry — residential or commercial.
+      {/* Trust Highlights */}
+      <section className="py-20 bg-[#EFE3D3]">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
+          <div className="bg-[#FBF6F0] p-8 rounded-xl shadow-sm">
+            <h3 className="text-2xl font-serif text-[#3A2F2A] mb-4">Timeless Craftsmanship</h3>
+            <p className="text-[#4F433C]">Hand-selected materials with classic warmth and durability</p>
+          </div>
+          <div className="bg-[#FBF6F0] p-8 rounded-xl shadow-sm">
+            <h3 className="text-2xl font-serif text-[#3A2F2A] mb-4">Comfort & Style</h3>
+            <p className="text-[#4F433C]">Luxurious carpets, rich hardwoods & premium bedroom furniture</p>
+          </div>
+          <div className="bg-[#FBF6F0] p-8 rounded-xl shadow-sm">
+            <h3 className="text-2xl font-serif text-[#3A2F2A] mb-4">Perfect Installation</h3>
+            <p className="text-[#4F433C]">Professional, clean fitting — every detail considered</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-24 bg-[#FBF6F0] text-center px-6">
+        <h2 className="text-4xl md:text-5xl font-serif text-[#3A2F2A] mb-6">
+          Create Your Dream Space Today
+        </h2>
+        <p className="text-xl text-[#4F433C] mb-10 max-w-3xl mx-auto">
+          Discover warm, elegant flooring and furniture — tailored to your home with expert care.
         </p>
-        <a href="/contact" className="bg-amber-700 hover:bg-amber-600 text-white px-12 py-6 rounded-full text-xl transition">
-          Request Free Quote
+        <a
+          href="/contact"
+          className="inline-block bg-[#B08D57] hover:bg-[#8f6f44] text-white px-14 py-7 rounded-full text-xl font-medium transition shadow-lg"
+        >
+          Request Your Free Quote
         </a>
       </section>
     </>
