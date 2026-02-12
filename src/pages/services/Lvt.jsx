@@ -6,48 +6,41 @@ export default function Lvt() {
   return (
     <>
       <Helmet>
-        <title>LVT Flooring Coventry | Luxury Vinyl Tile Installation & Supply</title>
-        <meta 
-          name="description" 
-          content="Waterproof luxury vinyl tile (LVT) flooring in Coventry. Click-lock installation, realistic wood & stone looks, durable for kitchens, bathrooms & high-traffic areas. Free quotes from AK Flooring & Furniture." 
-        />
-        <meta name="keywords" content="LVT flooring Coventry, luxury vinyl tile Coventry, waterproof flooring Coventry, click lock LVT Coventry, LVT installation Coventry" />
+        <title>LVT Flooring Coventry | Luxury Vinyl Tile</title>
       </Helmet>
 
-      <section className="py-20 px-6 bg-zinc-950">
+      <section className="py-20 px-6 bg-[#FBF6F0]">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-serif mb-10 text-center">LVT Flooring – Luxury Vinyl Tile</h1>
+          <h1 className="text-5xl md:text-6xl font-serif mb-10 text-center text-[#3A2F2A]">LVT Flooring</h1>
 
-          <p className="text-xl text-zinc-300 leading-relaxed mb-12 max-w-4xl mx-auto">
-            Looking for stylish, ultra-durable and completely waterproof flooring in Coventry? Our Luxury Vinyl Tile (LVT) solutions offer the realistic look of wood or stone with unbeatable performance – perfect for busy homes, kitchens, bathrooms and commercial spaces.
+          <p className="text-xl text-[#4F433C] leading-relaxed mb-12 max-w-4xl mx-auto text-center">
+            Stylish, ultra-durable and completely waterproof. Luxury Vinyl Tile (LVT) is perfect for kitchens and bathrooms.
           </p>
 
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div>
-              <h2 className="text-3xl font-serif mb-6">Key Benefits of LVT Flooring</h2>
-              <ul className="space-y-5 text-lg text-zinc-300">
-                <li>• 100% waterproof – ideal for spills, wet areas & underfloor heating</li>
-                <li>• Click-lock system for fast, glue-free installation</li>
-                <li>• Realistic wood, stone & tile designs with embossed texture</li>
-                <li>• Extremely scratch & stain resistant – great for pets & kids</li>
-                <li>• Easy to clean & maintain – no waxing or special treatments</li>
-                <li>• Comfortable underfoot with good sound reduction</li>
+              <h2 className="text-3xl font-serif mb-6 text-[#3A2F2A]">LVT Highlights</h2>
+              <ul className="space-y-5 text-lg text-[#4F433C]">
+                <li><span className="text-[#B08D57] mr-2">•</span> 100% Waterproof – ideal for wet areas</li>
+                <li><span className="text-[#B08D57] mr-2">•</span> Realistic wood, stone & tile designs</li>
+                <li><span className="text-[#B08D57] mr-2">•</span> Scratch & stain resistant – great for pets</li>
+                <li><span className="text-[#B08D57] mr-2">•</span> Easy to clean & maintain</li>
               </ul>
             </div>
 
-            <div className="bg-zinc-900 p-10 rounded-2xl">
-              <h3 className="text-3xl font-serif mb-6">Perfect For</h3>
-              <p className="text-zinc-400 text-lg mb-8">
-                Kitchens • Bathrooms • Conservatories • Hallways • Shops • Offices • High-traffic family homes across Coventry.
+            <div className="bg-[#EFE3D3] p-10 rounded-2xl border border-[#B08D57]/10">
+              <h3 className="text-3xl font-serif mb-6 text-[#3A2F2A]">Perfect For</h3>
+              <p className="text-[#4F433C] text-lg mb-8">
+                Kitchens • Bathrooms • Conservatories • Shops • Offices.
               </p>
-              <p className="text-amber-400 italic">
-                As trusted flooring experts in Coventry, we supply and install premium LVT brands with precise fitting for flawless, long-lasting results.
+              <p className="text-[#B08D57] italic font-bold">
+                Premium brands with precise fitting.
               </p>
             </div>
           </div>
 
           <div className="text-center">
-            <a href="/contact" className="inline-flex items-center gap-4 bg-amber-700 hover:bg-amber-600 text-white px-12 py-6 rounded-full text-xl font-medium transition">
+            <a href="/contact" className="inline-flex items-center gap-4 bg-[#B08D57] hover:bg-[#8f6f44] text-white px-12 py-6 rounded-xl text-xl font-medium transition shadow-xl">
               <Phone size={20} /> Get Your Free LVT Quote Today
             </a>
           </div>

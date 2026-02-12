@@ -7,46 +7,41 @@ export default function Commercial() {
     <>
       <Helmet>
         <title>Commercial Flooring Coventry | High-Traffic Durable Solutions</title>
-        <meta 
-          name="description" 
-          content="Durable commercial flooring in Coventry for shops, offices, hotels & public spaces. Heavy-duty LVT, carpet tiles & more – expert installation with free quotes from AK Flooring & Furniture." 
-        />
-        <meta name="keywords" content="commercial flooring Coventry, high traffic flooring Coventry, office flooring Coventry, shop flooring Coventry" />
+        <meta name="description" content="Durable commercial flooring in Coventry for shops, offices, hotels & public spaces. Heavy-duty LVT, carpet tiles & more." />
       </Helmet>
 
-      <section className="py-20 px-6 bg-zinc-950">
+      <section className="py-20 px-6 bg-[#FBF6F0]">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-serif mb-10 text-center">Commercial Flooring</h1>
+          <h1 className="text-5xl md:text-6xl font-serif mb-10 text-center text-[#3A2F2A]">Commercial Flooring</h1>
 
-          <p className="text-xl text-zinc-300 leading-relaxed mb-12 max-w-4xl mx-auto">
-            Fit-out or upgrade your business premises with flooring built to handle constant foot traffic, spills and heavy use. We provide tough, professional-grade solutions tailored to shops, offices, hotels, restaurants and more across Coventry.
+          <p className="text-xl text-[#4F433C] leading-relaxed mb-12 max-w-4xl mx-auto text-center">
+            Fit-out or upgrade your business premises with flooring built to handle constant foot traffic and heavy use. Professional-grade solutions for Coventry businesses.
           </p>
 
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div>
-              <h2 className="text-3xl font-serif mb-6">Commercial Advantages</h2>
-              <ul className="space-y-5 text-lg text-zinc-300">
-                <li>• High durability – withstands heavy daily traffic</li>
-                <li>• Slip-resistant & easy-to-clean surfaces</li>
-                <li>• Options include heavy-duty LVT, carpet tiles, safety flooring</li>
-                <li>• Fast installation to minimise business disruption</li>
-                <li>• Compliant with health & safety standards</li>
+              <h2 className="text-3xl font-serif mb-6 text-[#3A2F2A]">Commercial Advantages</h2>
+              <ul className="space-y-5 text-lg text-[#4F433C]">
+                <li><span className="text-[#B08D57] mr-2">•</span> High durability – withstands heavy daily traffic</li>
+                <li><span className="text-[#B08D57] mr-2">•</span> Slip-resistant & easy-to-clean surfaces</li>
+                <li><span className="text-[#B08D57] mr-2">•</span> Options include heavy-duty LVT and carpet tiles</li>
+                <li><span className="text-[#B08D57] mr-2">•</span> Fast installation to minimise disruption</li>
               </ul>
             </div>
 
-            <div className="bg-zinc-900 p-10 rounded-2xl">
-              <h3 className="text-3xl font-serif mb-6">Typical Applications</h3>
-              <p className="text-zinc-400 text-lg mb-8">
+            <div className="bg-[#EFE3D3] p-10 rounded-2xl border border-[#B08D57]/10">
+              <h3 className="text-3xl font-serif mb-6 text-[#3A2F2A]">Typical Applications</h3>
+              <p className="text-[#4F433C] text-lg mb-8">
                 Retail shops • Offices • Pubs & restaurants • Care homes • Schools • Reception areas.
               </p>
-              <p className="text-amber-400 italic">
-                Complete commercial flooring solutions under one roof – quality materials & precise installation guaranteed.
+              <p className="text-[#B08D57] italic font-bold">
+                Quality materials & precise installation guaranteed.
               </p>
             </div>
           </div>
 
           <div className="text-center">
-            <a href="/contact" className="inline-flex items-center gap-4 bg-amber-700 hover:bg-amber-600 text-white px-12 py-6 rounded-full text-xl font-medium transition">
+            <a href="/contact" className="inline-flex items-center gap-4 bg-[#B08D57] hover:bg-[#8f6f44] text-white px-12 py-6 rounded-xl text-xl font-medium transition shadow-xl">
               <Phone size={20} /> Free Commercial Quote Today
             </a>
           </div>

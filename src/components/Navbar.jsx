@@ -1,181 +1,16 @@
-// // Navbar.jsx
-// import React, { useState } from "react";
-// import { Link } from "react-router-dom";
-// import { ChevronDown, Phone } from "lucide-react";
-// import logo from "../assets/logo.png";
-
-// // Animated Hamburger Component
-// const AnimatedHamburger = ({ isMenuOpen, setIsMenuOpen }) => (
-//   <button
-//     onClick={() => setIsMenuOpen(!isMenuOpen)}
-//     className="flex flex-col justify-center items-end w-7 h-7 text-[#3A2F2A] focus:outline-none md:hidden"
-//     aria-expanded={isMenuOpen}
-//     aria-label="Toggle menu"
-//   >
-//     <span
-//       className={`block h-0.5 w-7 bg-current rounded-full transition-all duration-300 ease-in-out ${
-//         isMenuOpen ? 'rotate-45 translate-y-2' : ''
-//       }`}
-//     ></span>
-//     <span
-//       className={`block h-0.5 w-7 bg-current rounded-full transition-all duration-300 ease-in-out my-1.5 ${
-//         isMenuOpen ? 'opacity-0' : 'w-5'
-//       }`}
-//     ></span>
-//     <span
-//       className={`block h-0.5 w-7 bg-current rounded-full transition-all duration-300 ease-in-out ${
-//         isMenuOpen ? '-rotate-45 -translate-y-2' : ''
-//       }`}
-//     ></span>
-//   </button>
-// );
-
-// export default function Navbar() {
-//   const [mobileOpen, setMobileOpen] = useState(false);
-//   const [flooringOpen, setFlooringOpen] = useState(false);
-//   const [furnitureOpen, setFurnitureOpen] = useState(false);
-
-//   return (
-//     <nav className="bg-[#FBF6F0] sticky top-0 z-50 border-b border-[#EFE3D3]">
-//       {/* Reduced vertical padding for slim header */}
-//       <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-        
-//         {/* Logo - Increased size for desktop and mobile */}
-//         <Link to="/" className="flex items-center gap-3">
-//           <img
-//             src={logo}
-//             alt="AK Flooring & Furniture"
-//             className="h-14 md:h-16 w-auto object-contain"
-//           />
-//         </Link>
-
-//         {/* Desktop Menu */}
-//         <div className="hidden md:flex items-center gap-8 text-sm uppercase tracking-wider font-medium text-[#3A2F2A]">
-//           <Link to="/" className="hover:text-[#B08D57] transition-colors">Home</Link>
-//           <Link to="/about" className="hover:text-[#B08D57] transition-colors">About</Link>
-
-//           {/* Flooring Dropdown */}
-//           <div
-//             className="relative group"
-//             onMouseEnter={() => setFlooringOpen(true)}
-//             onMouseLeave={() => setFlooringOpen(false)}
-//           >
-//             <button className="flex items-center gap-1 hover:text-[#B08D57] transition-colors">
-//               FLOORING <ChevronDown size={14} />
-//             </button>
-//             {flooringOpen && (
-//               <div className="absolute top-full left-0 bg-[#FBF6F0] border border-[#EFE3D3] rounded-xl py-3 w-64 shadow-xl mt-1">
-//                 {[
-//                   { name: "Residential Flooring", path: "/services/residential-flooring" },
-//                   { name: "Commercial Flooring", path: "/services/commercial-flooring" },
-//                   { name: "Hardwood Flooring", path: "/services/hardwood-flooring" },
-//                   { name: "Laminate Flooring", path: "/services/laminate-flooring" },
-//                   { name: "LVT Flooring", path: "/services/lvt-flooring" },
-//                   { name: "Carpet Supply & Installation", path: "/services/carpet-supply-installation" },
-//                   { name: "Floor Repair & Replacement", path: "/services/floor-repair" },
-//                 ].map((item) => (
-//                   <Link key={item.path} to={item.path} className="block px-6 py-2.5 hover:bg-[#EFE3D3] text-[#3A2F2A] normal-case transition-colors">
-//                     {item.name}
-//                   </Link>
-//                 ))}
-//               </div>
-//             )}
-//           </div>
-
-//           {/* Furniture Dropdown */}
-//           <div
-//             className="relative group"
-//             onMouseEnter={() => setFurnitureOpen(true)}
-//             onMouseLeave={() => setFurnitureOpen(false)}
-//           >
-//             <button className="flex items-center gap-1 hover:text-[#B08D57] transition-colors">
-//               FURNITURE <ChevronDown size={14} />
-//             </button>
-//             {furnitureOpen && (
-//               <div className="absolute top-full left-0 bg-[#FBF6F0] border border-[#EFE3D3] rounded-xl py-3 w-56 shadow-xl mt-1">
-//                 {[
-//                   { name: "Beds & Mattresses", path: "/furniture/beds-mattresses" },
-//                   { name: "Sofa", path: "/furniture/sofa" },
-//                   { name: "Wardrobes", path: "/furniture/wardrobes" },
-//                 ].map((item) => (
-//                   <Link key={item.path} to={item.path} className="block px-6 py-2.5 hover:bg-[#EFE3D3] text-[#3A2F2A] normal-case transition-colors">
-//                     {item.name}
-//                   </Link>
-//                 ))}
-//               </div>
-//             )}
-//           </div>
-
-//           <Link to="/contact" className="hover:text-[#B08D57] transition-colors">Contact</Link>
-//         </div>
-
-//         {/* CTA + Mobile Toggle */}
-//         <div className="flex items-center gap-5">
-//           <Link
-//             to="/contact"
-//             className="hidden md:flex items-center gap-2 bg-[#B08D57] hover:bg-[#8f6f44] text-white px-7 py-3 rounded-full text-sm font-medium transition-colors shadow-sm"
-//           >
-//             <Phone size={18} /> Contact Us
-//           </Link>
-          
-//           <AnimatedHamburger isMenuOpen={mobileOpen} setIsMenuOpen={setMobileOpen} />
-//         </div>
-//       </div>
-
-//       {/* Mobile Menu */}
-//       {mobileOpen && (
-//         <div className="md:hidden bg-[#FBF6F0] border-t border-[#EFE3D3] py-6 px-6 space-y-6 text-[#3A2F2A] text-base overflow-y-auto max-h-[80vh]">
-//           <Link to="/" onClick={() => setMobileOpen(false)} className="block font-medium">Home</Link>
-//           <Link to="/about" onClick={() => setMobileOpen(false)} className="block font-medium">About</Link>
-
-//           {/* Mobile Flooring Section */}
-//           <div>
-//             <p className="font-semibold text-[#B08D57] mb-3 uppercase tracking-wider text-sm">Flooring</p>
-//             <div className="pl-4 space-y-3 flex flex-col border-l border-[#EFE3D3]">
-//               <Link to="/services/residential-flooring" onClick={() => setMobileOpen(false)}>Residential Flooring</Link>
-//               <Link to="/services/commercial-flooring" onClick={() => setMobileOpen(false)}>Commercial Flooring</Link>
-//               <Link to="/services/hardwood-flooring" onClick={() => setMobileOpen(false)}>Hardwood Flooring</Link>
-//               <Link to="/services/laminate-flooring" onClick={() => setMobileOpen(false)}>Laminate Flooring</Link>
-//               <Link to="/services/lvt-flooring" onClick={() => setMobileOpen(false)}>LVT Flooring</Link>
-//               <Link to="/services/carpet-supply-installation" onClick={() => setMobileOpen(false)}>Carpet Supply & Installation</Link>
-//               <Link to="/services/floor-repair" onClick={() => setMobileOpen(false)}>Floor Repair & Replacement</Link>
-//             </div>
-//           </div>
-
-//           {/* Mobile Furniture Section */}
-//           <div>
-//             <p className="font-semibold text-[#B08D57] mb-3 uppercase tracking-wider text-sm">Furniture</p>
-//             <div className="pl-4 space-y-3 flex flex-col border-l border-[#EFE3D3]">
-//               <Link to="/furniture/beds-mattresses" onClick={() => setMobileOpen(false)}>Beds & Mattresses</Link>
-//               <Link to="/furniture/sofa" onClick={() => setMobileOpen(false)}>Sofa</Link>
-//               <Link to="/furniture/wardrobes" onClick={() => setMobileOpen(false)}>Wardrobes</Link>
-//             </div>
-//           </div>
-
-//           <Link to="/contact" onClick={() => setMobileOpen(false)} className="block font-medium">Contact</Link>
-
-//           <div className="pt-2">
-//             <Link
-//               to="/contact"
-//               onClick={() => setMobileOpen(false)}
-//               className="block w-full bg-[#B08D57] hover:bg-[#8f6f44] text-white text-center py-4 rounded-full font-medium transition-colors"
-//             >
-//               Contact Us
-//             </Link>
-//           </div>
-//         </div>
-//       )}
-//     </nav>
-//   );
-// }
-
-// Navbar.jsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown, Phone } from "lucide-react";
+import { ChevronDown } from "lucide-react"; 
+import { 
+  FaHome, 
+  FaInfoCircle, 
+  FaCogs, 
+  FaUsers, 
+  FaBriefcase, 
+  FaPhoneAlt 
+} from 'react-icons/fa';
 import logo from "../assets/logo.png";
 
-// Animated Hamburger Component (unchanged)
 const AnimatedHamburger = ({ isMenuOpen, setIsMenuOpen }) => (
   <button
     onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -183,93 +18,72 @@ const AnimatedHamburger = ({ isMenuOpen, setIsMenuOpen }) => (
     aria-expanded={isMenuOpen}
     aria-label="Toggle menu"
   >
-    <span
-      className={`block h-0.5 w-7 bg-current rounded-full transition-all duration-300 ease-in-out ${
-        isMenuOpen ? 'rotate-45 translate-y-2' : ''
-      }`}
-    ></span>
-    <span
-      className={`block h-0.5 w-7 bg-current rounded-full transition-all duration-300 ease-in-out my-1.5 ${
-        isMenuOpen ? 'opacity-0' : 'w-5'
-      }`}
-    ></span>
-    <span
-      className={`block h-0.5 w-7 bg-current rounded-full transition-all duration-300 ease-in-out ${
-        isMenuOpen ? '-rotate-45 -translate-y-2' : ''
-      }`}
-    ></span>
+    <span className={`block h-0.5 w-7 bg-current rounded-full transition-all duration-300 ease-in-out ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+    <span className={`block h-0.5 w-7 bg-current rounded-full transition-all duration-300 ease-in-out my-1.5 ${isMenuOpen ? 'opacity-0' : 'w-5'}`}></span>
+    <span className={`block h-0.5 w-7 bg-current rounded-full transition-all duration-300 ease-in-out ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
   </button>
 );
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileFlooringOpen, setMobileFlooringOpen] = useState(false);
+  const [mobileFurnitureOpen, setMobileFurnitureOpen] = useState(false);
+  
   const [flooringOpen, setFlooringOpen] = useState(false);
   const [furnitureOpen, setFurnitureOpen] = useState(false);
 
+  const flooringLinks = [
+    { name: "Residential Flooring", path: "/services/residential-flooring", icon: <FaHome className="text-[#B08D57]" /> },
+    { name: "Commercial Flooring", path: "/services/commercial-flooring", icon: <FaBriefcase className="text-[#B08D57]" /> },
+    { name: "Hardwood Flooring", path: "/services/hardwood-flooring", icon: <FaCogs className="text-[#B08D57]" /> },
+    { name: "Laminate Flooring", path: "/services/laminate-flooring", icon: <FaCogs className="text-[#B08D57]" /> },
+    { name: "LVT Flooring", path: "/services/lvt-flooring", icon: <FaCogs className="text-[#B08D57]" /> },
+    { name: "Carpet Installation", path: "/services/carpet-supply-installation", icon: <FaUsers className="text-[#B08D57]" /> },
+    { name: "Floor Repair", path: "/services/floor-repair", icon: <FaCogs className="text-[#B08D57]" /> },
+  ];
+
+  const furnitureLinks = [
+    { name: "Beds & Mattresses", path: "/furniture/beds-mattresses", icon: <FaBriefcase className="text-[#B08D57]" /> },
+    { name: "Sofa", path: "/furniture/sofa", icon: <FaBriefcase className="text-[#B08D57]" /> },
+    { name: "Wardrobes", path: "/furniture/wardrobes", icon: <FaBriefcase className="text-[#B08D57]" /> },
+  ];
+
   return (
-    <nav 
-      className="
-        sticky top-0 z-50
-        bg-[#FBF6F0]/70             
-        backdrop-blur-xl             
-        backdrop-filter              
-        border-b border-[#EFE3D3]/60  
-        shadow-sm                    
-        transition-all duration-300
-      "
-    >
-      {/* Main content container */}
-      <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-        
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
-          <img
-            src={logo}
-            alt="AK Flooring & Furniture"
-            className="h-14 md:h-16 w-auto object-contain"
+    <nav className="sticky top-0 z-50 bg-[#FBF6F0]/70 backdrop-blur-xl border-b border-white/30 shadow-lg transition-all duration-300">
+      <div className="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+
+        {/* LOGO - Large Size */}
+        <Link to="/" className="flex items-center shrink-0 py-1">
+          <img 
+            src={logo} 
+            alt="AK Flooring" 
+            className="h-28 md:h-32 w-auto object-contain transition-transform duration-300 hover:scale-105" 
           />
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8 text-sm uppercase tracking-wider font-medium text-[#3A2F2A]">
-          <Link to="/" className="hover:text-[#B08D57] transition-colors">Home</Link>
-          <Link to="/about" className="hover:text-[#B08D57] transition-colors">About</Link>
+        {/* DESKTOP NAV */}
+        <div className="hidden md:flex items-center justify-end gap-8 ml-auto text-xs uppercase tracking-[0.12em] font-bold text-[#3A2F2A]">
+          <Link to="/" className="flex items-center gap-2 hover:text-[#B08D57] transition-colors">
+            <FaHome className="text-sm text-[#B08D57]" /> HOME
+          </Link>
+          <Link to="/about" className="flex items-center gap-2 hover:text-[#B08D57] transition-colors">
+            <FaInfoCircle className="text-sm text-[#B08D57]" /> ABOUT
+          </Link>
 
           {/* Flooring Dropdown */}
-          <div
-            className="relative group"
-            onMouseEnter={() => setFlooringOpen(true)}
+          <div 
+            className="relative py-6" 
+            onMouseEnter={() => setFlooringOpen(true)} 
             onMouseLeave={() => setFlooringOpen(false)}
           >
-            <button className="flex items-center gap-1 hover:text-[#B08D57] transition-colors">
-              FLOORING <ChevronDown size={14} />
+            <button className="flex items-center gap-2 hover:text-[#B08D57] transition-colors text-[#3A2F2A]">
+              <FaCogs className="text-sm text-[#B08D57]" /> FLOORING <ChevronDown size={14} className={`transition-transform duration-300 ${flooringOpen ? 'rotate-180' : ''}`} />
             </button>
             {flooringOpen && (
-              <div 
-                className="
-                  absolute top-full left-0 
-                  bg-[#FBF6F0]/90               
-                  backdrop-blur-lg 
-                  border border-[#EFE3D3]/70 
-                  rounded-xl py-3 w-64 
-                  shadow-xl mt-1
-                  transition-opacity duration-200
-                "
-              >
-                {[
-                  { name: "Residential Flooring", path: "/services/residential-flooring" },
-                  { name: "Commercial Flooring", path: "/services/commercial-flooring" },
-                  { name: "Hardwood Flooring", path: "/services/hardwood-flooring" },
-                  { name: "Laminate Flooring", path: "/services/laminate-flooring" },
-                  { name: "LVT Flooring", path: "/services/lvt-flooring" },
-                  { name: "Carpet Supply & Installation", path: "/services/carpet-supply-installation" },
-                  { name: "Floor Repair & Replacement", path: "/services/floor-repair" },
-                ].map((item) => (
-                  <Link 
-                    key={item.path} 
-                    to={item.path} 
-                    className="block px-6 py-2.5 hover:bg-[#EFE3D3]/70 text-[#3A2F2A] normal-case transition-colors"
-                  >
+              <div className="absolute top-[85%] right-0 bg-white/90 backdrop-blur-md border border-white/40 rounded-xl py-3 w-64 shadow-2xl animate-in fade-in slide-in-from-top-2">
+                {flooringLinks.map((item) => (
+                  <Link key={item.path} to={item.path} className="flex items-center gap-3 px-6 py-2.5 hover:bg-[#B08D57]/10 hover:text-[#B08D57] text-[#3A2F2A] normal-case tracking-normal transition-colors">
+                    {item.icon}
                     {item.name}
                   </Link>
                 ))}
@@ -277,36 +91,20 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* Furniture Dropdown – same glass treatment */}
-          <div
-            className="relative group"
-            onMouseEnter={() => setFurnitureOpen(true)}
+          {/* Furniture Dropdown */}
+          <div 
+            className="relative py-6" 
+            onMouseEnter={() => setFurnitureOpen(true)} 
             onMouseLeave={() => setFurnitureOpen(false)}
           >
-            <button className="flex items-center gap-1 hover:text-[#B08D57] transition-colors">
-              FURNITURE <ChevronDown size={14} />
+            <button className="flex items-center gap-2 hover:text-[#B08D57] transition-colors text-[#3A2F2A]">
+              <FaBriefcase className="text-sm text-[#B08D57]" /> FURNITURE <ChevronDown size={14} className={`transition-transform duration-300 ${furnitureOpen ? 'rotate-180' : ''}`} />
             </button>
             {furnitureOpen && (
-              <div 
-                className="
-                  absolute top-full left-0 
-                  bg-[#FBF6F0]/90
-                  backdrop-blur-lg
-                  border border-[#EFE3D3]/70
-                  rounded-xl py-3 w-56 
-                  shadow-xl mt-1
-                "
-              >
-                {[
-                  { name: "Beds & Mattresses", path: "/furniture/beds-mattresses" },
-                  { name: "Sofa", path: "/furniture/sofa" },
-                  { name: "Wardrobes", path: "/furniture/wardrobes" },
-                ].map((item) => (
-                  <Link 
-                    key={item.path} 
-                    to={item.path} 
-                    className="block px-6 py-2.5 hover:bg-[#EFE3D3]/70 text-[#3A2F2A] normal-case transition-colors"
-                  >
+              <div className="absolute top-[85%] right-0 bg-white/90 backdrop-blur-md border border-white/40 rounded-xl py-3 w-56 shadow-2xl animate-in fade-in slide-in-from-top-2">
+                {furnitureLinks.map((item) => (
+                  <Link key={item.path} to={item.path} className="flex items-center gap-3 px-6 py-2.5 hover:bg-[#B08D57]/10 hover:text-[#B08D57] text-[#3A2F2A] normal-case tracking-normal transition-colors">
+                    {item.icon}
                     {item.name}
                   </Link>
                 ))}
@@ -314,77 +112,65 @@ export default function Navbar() {
             )}
           </div>
 
-          <Link to="/contact" className="hover:text-[#B08D57] transition-colors">Contact</Link>
+          <Link 
+            to="/contact" 
+            className="flex items-center gap-2 ml-4 bg-[#B08D57] text-white px-6 py-4 rounded-xl text-[10px] tracking-[0.2em] font-black hover:bg-[#8f6f44] shadow-md hover:shadow-xl transition-all"
+          >
+            <FaPhoneAlt /> CONTACT US
+          </Link>
         </div>
 
-        {/* CTA + Mobile Toggle */}
-        <div className="flex items-center gap-5">
-          {/* <Link
-            to="/contact"
-            className="
-              hidden md:flex items-center gap-2 
-              bg-[#B08D57]/90 hover:bg-[#8f6f44] 
-              text-white px-7 py-3 rounded-full 
-              text-sm font-medium transition-colors shadow-sm
-              backdrop-blur-sm               
-            "
-          >
-            <Phone size={18} /> Contact Us
-          </Link> */}
-          
+        {/* Mobile Toggle */}
+        <div className="md:hidden">
           <AnimatedHamburger isMenuOpen={mobileOpen} setIsMenuOpen={setMobileOpen} />
         </div>
       </div>
 
-      {/* Mobile Menu – also glassified */}
+      {/* MOBILE MENU */}
       {mobileOpen && (
-        <div 
-          className="
-            md:hidden 
-            bg-[#FBF6F0]/85 
-            backdrop-blur-xl
-            border-t border-[#EFE3D3]/60 
-            py-6 px-6 space-y-6 
-            text-[#3A2F2A] text-base 
-            overflow-y-auto max-h-[80vh]
-          "
-        >
-          <Link to="/" onClick={() => setMobileOpen(false)} className="block font-medium">Home</Link>
-          <Link to="/about" onClick={() => setMobileOpen(false)} className="block font-medium">About</Link>
+        <div className="md:hidden bg-[#FBF6F0]/95 backdrop-blur-xl border-t border-[#EFE3D3]/60 py-6 px-6 space-y-4 text-[#3A2F2A] overflow-y-auto max-h-[85vh]">
+          <Link to="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-3 text-lg font-medium text-[#3A2F2A]">
+            <FaHome className="text-[#B08D57]" /> HOME
+          </Link>
+          <Link to="/about" onClick={() => setMobileOpen(false)} className="flex items-center gap-3 text-lg font-medium text-[#3A2F2A]">
+            <FaInfoCircle className="text-[#B08D57]" /> ABOUT
+          </Link>
 
-          {/* Mobile Flooring Section */}
-          <div>
-            <p className="font-semibold text-[#B08D57] mb-3 uppercase tracking-wider text-sm">Flooring</p>
-            <div className="pl-4 space-y-3 flex flex-col border-l border-[#EFE3D3]/60">
-              <Link to="/services/residential-flooring" onClick={() => setMobileOpen(false)}>Residential Flooring</Link>
-              <Link to="/services/commercial-flooring" onClick={() => setMobileOpen(false)}>Commercial Flooring</Link>
-              <Link to="/services/hardwood-flooring" onClick={() => setMobileOpen(false)}>Hardwood Flooring</Link>
-              <Link to="/services/laminate-flooring" onClick={() => setMobileOpen(false)}>Laminate Flooring</Link>
-              <Link to="/services/lvt-flooring" onClick={() => setMobileOpen(false)}>LVT Flooring</Link>
-              <Link to="/services/carpet-supply-installation" onClick={() => setMobileOpen(false)}>Carpet Supply & Installation</Link>
-              <Link to="/services/floor-repair" onClick={() => setMobileOpen(false)}>Floor Repair & Replacement</Link>
+          <div className="border-b border-[#EFE3D3]/30 pb-2">
+            <button onClick={() => setMobileFlooringOpen(!mobileFlooringOpen)} className="flex items-center justify-between w-full text-lg font-medium text-[#3A2F2A]">
+              <span className="flex items-center gap-3"><FaCogs className="text-[#B08D57]" /> FLOORING</span>
+              <ChevronDown size={20} className={`transition-transform duration-300 ${mobileFlooringOpen ? 'rotate-180' : ''}`} />
+            </button>
+            <div className={`overflow-hidden transition-all duration-300 ${mobileFlooringOpen ? 'max-h-[500px] mt-4' : 'max-h-0'}`}>
+              <div className="pl-4 space-y-4 border-l-2 border-[#EFE3D3]">
+                {flooringLinks.map((item) => (
+                  <Link key={item.path} to={item.path} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 text-[#3A2F2A]">
+                    {item.icon} {item.name}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Mobile Furniture Section */}
-          <div>
-            <p className="font-semibold text-[#B08D57] mb-3 uppercase tracking-wider text-sm">Furniture</p>
-            <div className="pl-4 space-y-3 flex flex-col border-l border-[#EFE3D3]/60">
-              <Link to="/furniture/beds-mattresses" onClick={() => setMobileOpen(false)}>Beds & Mattresses</Link>
-              <Link to="/furniture/sofa" onClick={() => setMobileOpen(false)}>Sofa</Link>
-              <Link to="/furniture/wardrobes" onClick={() => setMobileOpen(false)}>Wardrobes</Link>
+          <div className="border-b border-[#EFE3D3]/30 pb-2">
+            <button onClick={() => setMobileFurnitureOpen(!mobileFurnitureOpen)} className="flex items-center justify-between w-full text-lg font-medium text-[#3A2F2A]">
+              <span className="flex items-center gap-3"><FaBriefcase className="text-[#B08D57]" /> FURNITURE</span>
+              <ChevronDown size={20} className={`transition-transform duration-300 ${mobileFurnitureOpen ? 'rotate-180' : ''}`} />
+            </button>
+            <div className={`overflow-hidden transition-all duration-300 ${mobileFurnitureOpen ? 'max-h-[300px] mt-4' : 'max-h-0'}`}>
+              <div className="pl-4 space-y-4 border-l-2 border-[#EFE3D3]">
+                {furnitureLinks.map((item) => (
+                  <Link key={item.path} to={item.path} onClick={() => setMobileOpen(false)} className="flex items-center gap-3 text-[#3A2F2A]">
+                    {item.icon} {item.name}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
-
-          <Link to="/contact" onClick={() => setMobileOpen(false)} className="block font-medium">Contact</Link>
-
-          <div className="pt-2">
-            <Link
-              to="/contact"
-              onClick={() => setMobileOpen(false)}
-              className="block w-full bg-[#B08D57]/90 hover:bg-[#8f6f44] text-white text-center py-4 rounded-full font-medium transition-colors backdrop-blur-sm"
-            >
-              Contact Us
+          
+          <div className="pt-4">
+            <Link to="/contact" onClick={() => setMobileOpen(false)} className="flex items-center justify-center gap-3 w-full bg-[#B08D57] text-white py-4 rounded-xl font-bold shadow-lg">
+              <FaPhoneAlt /> CONTACT US
             </Link>
           </div>
         </div>

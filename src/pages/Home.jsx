@@ -38,13 +38,13 @@
 //           <div className="flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
 //             <a
 //               href="/contact"
-//               className="bg-[#B08D57] hover:bg-[#8f6f44] text-white px-10 py-5 rounded-full text-lg font-medium transition flex items-center justify-center gap-3 shadow-md"
+//               className="bg-[#B08D57] hover:bg-[#8f6f44] text-white px-10 py-5 rounded-xl text-lg font-medium transition flex items-center justify-center gap-3 shadow-md"
 //             >
 //               <Phone size={20} /> Get Free Quote
 //             </a>
 //             <a
 //               href="/services"
-//               className="border-2 border-[#B08D57] text-[#3A2F2A] hover:bg-[#B08D57]/10 px-10 py-5 rounded-full text-lg font-medium transition flex items-center justify-center gap-3"
+//               className="border-2 border-[#B08D57] text-[#3A2F2A] hover:bg-[#B08D57]/10 px-10 py-5 rounded-xl text-lg font-medium transition flex items-center justify-center gap-3"
 //             >
 //               Explore Collections <ArrowRight size={18} />
 //             </a>
@@ -80,7 +80,7 @@
 //         </p>
 //         <a
 //           href="/contact"
-//           className="inline-block bg-[#B08D57] hover:bg-[#8f6f44] text-white px-14 py-7 rounded-full text-xl font-medium transition shadow-lg"
+//           className="inline-block bg-[#B08D57] hover:bg-[#8f6f44] text-white px-14 py-7 rounded-xl text-xl font-medium transition shadow-lg"
 //         >
 //           Request Your Free Quote
 //         </a>
@@ -190,15 +190,17 @@ export default function Home() {
       </Helmet>
 
       {/* Hero Section */}
-      <section
+    <section
         className="relative min-h-[90vh] md:min-h-[100vh] flex items-center bg-cover bg-center bg-fixed"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=90')",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FBF6F0]/65 via-[#FBF6F0]/75 to-[#FBF6F0]/85" />
-
+        {/* Adjusted Overlay: Reduced opacity from 0.65+ to 0.30+ to let the image show more clearly */}
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-[#3A2F2A]/70 via-[#3A2F2A]/60 to-[#3A2F2A]/50" /> */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/50" />
+        
         <motion.div
           className="relative z-10 max-w-7xl mx-auto px-6 py-20 md:py-32 text-center md:text-left"
           initial="hidden"
@@ -206,7 +208,7 @@ export default function Home() {
           variants={staggerContainer}
         >
           <motion.h1
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-extrabold text-[#3A2F2A] leading-[1.05] tracking-tight"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-extrabold text-[#f0eceb] leading-[1.05] tracking-tight drop-shadow-sm"
             variants={fadeInUp}
           >
             Warm Luxury
@@ -215,28 +217,31 @@ export default function Home() {
           </motion.h1>
 
           <motion.p
-            className="mt-8 text-xl md:text-2xl lg:text-3xl text-[#4F433C] font-light max-w-4xl mx-auto md:mx-0"
+            className="mt-8 text-xl md:text-2xl lg:text-3xl text-[#f0eceb] font-medium max-w-4xl mx-auto md:mx-0 drop-shadow-sm"
             variants={fadeInUp}
           >
             Timeless materials. Exceptional comfort. Masterful installation.
           </motion.p>
 
-          <motion.div
+         <motion.div
             className="mt-12 flex flex-col sm:flex-row gap-6 justify-center md:justify-start"
             variants={fadeInUp}
           >
+            {/* Contact Us Button */}
             <motion.a
               href="/contact"
-              className="group bg-[#B08D57] hover:bg-[#B08D57]/90 text-white px-10 py-6 rounded-full text-xl font-medium transition-all duration-500 shadow-xl hover:shadow-2xl hover:scale-[1.03] flex items-center justify-center gap-3"
+              className="group bg-[#B08D57] hover:bg-[#8f6f44] text-white px-10 py-6 rounded-xl text-xl font-medium transition-all duration-500 shadow-xl hover:shadow-2xl flex items-center justify-center gap-3 sm:min-w-[260px]"
               whileHover={{ scale: 1.05, boxShadow: "0 25px 50px -12px rgba(176, 141, 87, 0.4)" }}
               whileTap={{ scale: 0.98 }}
             >
               <Phone size={22} />
               Contact Us
             </motion.a>
+
+            {/* Explore Collections Button */}
             <motion.a
               href="/services"
-              className="group border-2 border-[#B08D57] text-[#3A2F2A] hover:bg-[#B08D57]/10 px-10 py-6 rounded-full text-xl font-medium transition-all duration-500 hover:shadow-xl flex items-center justify-center gap-3"
+              className="group border-2 border-[#B08D57] bg-white/20 backdrop-blur-md text-[#3A2F2A] hover:bg-white/40 px-10 py-6 rounded-xl text-xl font-medium transition-all duration-500 hover:shadow-xl flex items-center justify-center gap-3 sm:min-w-[260px]"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -247,98 +252,8 @@ export default function Home() {
               />
             </motion.a>
           </motion.div>
-        </motion.div>
+          </motion.div>
       </section>
-
-      {/* Trust Highlights */}
-      {/* <section className="py-24 md:py-32 bg-[#EFE3D3]">
-        <motion.div
-          className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 lg:gap-14"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={staggerContainer}
-        >
-          {[
-            {
-              title: "Timeless Craftsmanship",
-              desc: "Hand-selected premium woods, rich grains, enduring finishes",
-            },
-            {
-              title: "Refined Comfort & Style",
-              desc: "Sumptuous carpets, warm hardwoods, luxurious bedroom collections",
-            },
-            {
-              title: "Flawless Installation",
-              desc: "Precision fitting, seamless transitions, meticulous attention",
-            },
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              className="bg-[#FBF6F0] p-10 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-[#EFE3D3]/60"
-              variants={fadeInUp}
-            >
-              <h3 className="text-3xl font-serif text-[#3A2F2A] mb-5">{item.title}</h3>
-              <p className="text-lg text-[#4F433C] leading-relaxed">{item.desc}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section> */}
-
-      {/* Trust Highlights */}
-      {/* <section className="py-20 md:py-28 bg-[#EFE3D3] overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-serif text-center text-[#3A2F2A] mb-16 md:mb-20">
-            Why Choose AK Flooring & Furniture
-          </h2>
-
-          <div className="space-y-28 md:space-y-40 lg:space-y-52">
-            {highlights.map((item, index) => {
-              const isEven = index % 2 === 0; // optional: alternate sides if you want (currently always image left)
-
-              return (
-                <motion.div
-                  key={index}
-                  className="grid md:grid-cols-2 gap-8 lg:gap-14 items-center"
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{
-                    once: false,           // important → allows reverse animation on scroll up
-                    amount: 0.35 + index * 0.15, // progressive threshold: 0.35 → 0.5 → 0.65
-                    margin: "-10% 0px -30% 0px", // helps with smooth enter/leave
-                  }}
-                >
-                  {/* Image */}
-                  {/* <motion.div
-                    variants={fadeInFromLeft}
-                    className="overflow-hidden rounded-2xl shadow-2xl order-2 md:order-1"
-                  >
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-72 md:h-[420px] lg:h-[500px] object-cover transition-transform duration-1000 hover:scale-105"
-                    />
-                  </motion.div> */}
-
-                  {/* Text Content */}
-                  {/* <motion.div
-                    variants={fadeInFromRight}
-                    className="text-center md:text-left order-1 md:order-2 px-4 md:px-0"
-                  >
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[#3A2F2A] mb-6 leading-tight">
-                      {item.title}
-                    </h3>
-                    <p className="text-lg md:text-xl lg:text-2xl text-[#4F433C] leading-relaxed max-w-xl mx-auto md:mx-0">
-                      {item.desc}
-                    </p>
-                  </motion.div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>  */}
-
       {/* Trust Highlights */}
       <section className="py-16 md:py-24 lg:py-32 bg-[#EFE3D3] overflow-hidden">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
@@ -695,7 +610,7 @@ export default function Home() {
                   inline-flex items-center gap-3 
                   px-8 py-4 md:px-10 md:py-5 
                   bg-[#B08D57]/90 hover:bg-[#B08D57] 
-                  text-white rounded-full 
+                  text-white rounded-xl 
                   text-lg md:text-xl font-medium 
                   transition-all duration-500 
                   shadow-xl hover:shadow-2xl hover:scale-[1.04] 
@@ -736,7 +651,7 @@ export default function Home() {
             className="inline-flex items-center gap-3 
                   px-8 py-4 md:px-10 md:py-5 
                   bg-[#B08D57]/90 hover:bg-[#B08D57] 
-                  text-white rounded-full 
+                  text-white rounded-xl 
                   text-lg md:text-xl font-medium 
                   transition-all duration-500 
                   shadow-xl hover:shadow-2xl hover:scale-[1.04] 
