@@ -1,52 +1,90 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Phone } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.2 } },
+};
 
 export default function Hardwood() {
+  const woodGallery = [
+    "https://images.unsplash.com/photo-1581850518616-0819c3a24ca1?auto=format&fit=crop&w=800", // Oak hardwood
+    "https://images.unsplash.com/photo-1600607687940-47a09b6ed9a0?auto=format&fit=crop&w=800", // Walnut floor
+    "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=800", // Parquet
+    "https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?auto=format&fit=crop&w=800"  // Engineered wood
+  ];
+
   return (
     <>
-      <Helmet>
-        <title>Hardwood Flooring Coventry | Solid & Engineered Wood Floors</title>
-        <meta name="description" content="Premium solid & engineered hardwood flooring in Coventry. Timeless luxury and natural beauty." />
-      </Helmet>
+      <Helmet><title>Hardwood Flooring Coventry | AK Flooring</title></Helmet>
+      
+      <motion.section
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+        className="relative h-[60vh] flex items-center justify-center"
+      >
+        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1920" className="absolute inset-0 w-full h-full object-cover" alt="Natural hardwood flooring in home" />
+        <div className="absolute inset-0 bg-[#3A2F2A]/60" />
+        <motion.h1 variants={fadeInUp} className="relative text-5xl md:text-7xl font-serif text-white text-center">Hardwood Flooring</motion.h1>
+      </motion.section>
 
-      <section className="py-20 px-6 bg-[#FBF6F0]">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-serif mb-10 text-center text-[#3A2F2A]">Hardwood Flooring</h1>
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={staggerContainer}
+        className="py-24 bg-[#FBF6F0] px-6"
+      >
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <motion.img
+            variants={fadeInUp}
+            whileHover={{ rotate: -2, scale: 1.05 }}
+            src="https://images.unsplash.com/photo-1507652313519-d451e12d596d?auto=format&fit=crop&w=800"
+            className="rounded-3xl shadow-2xl"
+            alt="Close-up of hardwood detail"
+          />
+          <motion.div variants={fadeInUp} className="space-y-6">
+            <h2 className="text-4xl font-serif text-[#3A2F2A]">Natural Luxury</h2>
+            <p className="text-lg text-[#4F433C]">Solid and engineered oak floors that increase your home's value and aesthetic appeal.</p>
+            <ul className="space-y-4">
+              {["Authentic Parquet & Herringbone", "Engineered Wood for Underfloor Heating", "UV Oiled & Lacquered Finishes"].map((item, i) => (
+                <motion.li key={i} variants={fadeInUp} className="flex gap-3"><CheckCircle2 className="text-[#B08D57]"/> {item}</motion.li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
+      </motion.section>
 
-          <p className="text-xl text-[#4F433C] leading-relaxed mb-12 max-w-4xl mx-auto text-center">
-            Nothing compares to the warmth and investment value of real wood. We supply and expertly install both solid and engineered hardwood.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div>
-              <h2 className="text-3xl font-serif mb-6 text-[#3A2F2A]">Benefits of Hardwood</h2>
-              <ul className="space-y-5 text-lg text-[#4F433C]">
-                <li><span className="text-[#B08D57] mr-2">•</span> Authentic natural wood – unique variations</li>
-                <li><span className="text-[#B08D57] mr-2">•</span> Can be sanded & refinished multiple times</li>
-                <li><span className="text-[#B08D57] mr-2">•</span> Increases property value – premium look</li>
-                <li><span className="text-[#B08D57] mr-2">•</span> Suitable for underfloor heating (engineered)</li>
-              </ul>
-            </div>
-
-            <div className="bg-[#EFE3D3] p-10 rounded-2xl border border-[#B08D57]/10">
-              <h3 className="text-3xl font-serif mb-6 text-[#3A2F2A]">Popular Choices</h3>
-              <p className="text-[#4F433C] text-lg mb-8">
-                Oak • Walnut • Maple • Engineered herringbone & parquet patterns.
-              </p>
-              <p className="text-[#B08D57] italic font-bold">
-                Flawless results from start to finish.
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <a href="/contact" className="inline-flex items-center gap-4 bg-[#B08D57] hover:bg-[#8f6f44] text-white px-12 py-6 rounded-xl text-xl font-medium transition shadow-xl">
-              <Phone size={20} /> Book Free Hardwood Consultation
-            </a>
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={staggerContainer}
+        className="py-24 bg-white px-6"
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="columns-1 md:columns-3 gap-4 space-y-4">
+            {woodGallery.map((img, i) => (
+              <motion.img
+                key={i}
+                variants={fadeInUp}
+                whileHover={{ scale: 1.02 }}
+                src={img}
+                className="rounded-2xl shadow-md w-full"
+                alt={`Hardwood gallery ${i + 1}`}
+              />
+            ))}
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }

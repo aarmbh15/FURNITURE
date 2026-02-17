@@ -43,9 +43,9 @@ export default function Navbar() {
   ];
 
   const furnitureLinks = [
-    { name: "Beds & Mattresses", path: "/furniture/beds-mattresses", icon: <FaBriefcase className="text-[#B08D57]" /> },
-    { name: "Sofa", path: "/furniture/sofa", icon: <FaBriefcase className="text-[#B08D57]" /> },
-    { name: "Wardrobes", path: "/furniture/wardrobes", icon: <FaBriefcase className="text-[#B08D57]" /> },
+    { name: "Beds & Mattresses", path: "/services/Beds", icon: <FaBriefcase className="text-[#B08D57]" /> },
+    { name: "Sofa", path: "/services/Sofas", icon: <FaBriefcase className="text-[#B08D57]" /> },
+    { name: "Wardrobes", path: "/services/Wardrobes", icon: <FaBriefcase className="text-[#B08D57]" /> },
   ];
 
   return (

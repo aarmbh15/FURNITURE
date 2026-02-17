@@ -2,12 +2,15 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
+// Components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop"; // Ensure this file exists in your components folder
 
+// Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Services from "./pages/Services";                  // Main Flooring page
+import Services from "./pages/Services";
 import Carpet from "./pages/services/Carpet";
 import Lvt from "./pages/services/Lvt";
 import Laminate from "./pages/services/Laminate";
@@ -15,6 +18,9 @@ import Hardwood from "./pages/services/Hardwood";
 import Commercial from "./pages/services/Commercial";
 import Residential from "./pages/services/Residential";
 import Repair from "./pages/services/Repair";
+import Beds from "./pages/services/Beds";
+import Sofas from "./pages/services/Sofas";
+import Wardrobes from "./pages/services/Wardrobes";
 import Furniture from "./pages/Furniture";
 import Contact from "./pages/Contact";
 import Shop from "./pages/Shop";
@@ -24,6 +30,12 @@ export default function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
+        {/* SCROLL TO TOP PLACEMENT: 
+            It must be inside BrowserRouter to listen to route changes, 
+            but outside of Routes so it doesn't render as a page.
+        */}
+        <ScrollToTop />
+
         <div className="bg-[#F5F5F0] text-[#333333] min-h-screen font-sans">
           <Navbar />
           <Routes>
@@ -36,7 +48,10 @@ export default function App() {
             <Route path="/services/hardwood-flooring" element={<Hardwood />} />
             <Route path="/services/commercial-flooring" element={<Commercial />} />
             <Route path="/services/residential-flooring" element={<Residential />} />
+            <Route path="/services/Beds" element={<Beds />} />
             <Route path="/services/floor-repair" element={<Repair />} />
+            <Route path="/services/Sofas" element={<Sofas />} />
+            <Route path="/services/Wardrobes" element={<Wardrobes />} />
             <Route path="/furniture" element={<Furniture />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/shop" element={<Shop />} />

@@ -1,51 +1,80 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Phone } from "lucide-react";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.2 } },
+};
 
 export default function Lvt() {
+  const lvtImages = [
+    "https://cdn.mos.cms.futurecdn.net/sfjYgvRrHMnumPQV9ePUpG.jpg", // LVT in kitchen
+    "https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=800", // Waterproof LVT
+    "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=800", // Stone look
+    "https://images.unsplash.com/photo-1600585154526-990dcea4db0d?auto=format&fit=crop&w=800"  // Wood look LVT
+  ];
+
   return (
     <>
-      <Helmet>
-        <title>LVT Flooring Coventry | Luxury Vinyl Tile</title>
-      </Helmet>
+      <Helmet><title>LVT Flooring Coventry | Luxury Vinyl Tile</title></Helmet>
+      <motion.section
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+        className="relative h-[60vh] flex items-center justify-center overflow-hidden"
+      >
+        <img 
+          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1920&q=80" 
+          className="absolute inset-0 w-full h-full object-cover" 
+          alt="Luxury vinyl tile flooring in modern interior" 
+        />
+        <div className="absolute inset-0 bg-[#3A2F2A]/60" />
+        <motion.h1 variants={fadeInUp} className="relative text-5xl md:text-7xl font-serif text-white text-center px-6">
+          Luxury Vinyl Tile (LVT)
+        </motion.h1>
+      </motion.section>
 
-      <section className="py-20 px-6 bg-[#FBF6F0]">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-serif mb-10 text-center text-[#3A2F2A]">LVT Flooring</h1>
-
-          <p className="text-xl text-[#4F433C] leading-relaxed mb-12 max-w-4xl mx-auto text-center">
-            Stylish, ultra-durable and completely waterproof. Luxury Vinyl Tile (LVT) is perfect for kitchens and bathrooms.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div>
-              <h2 className="text-3xl font-serif mb-6 text-[#3A2F2A]">LVT Highlights</h2>
-              <ul className="space-y-5 text-lg text-[#4F433C]">
-                <li><span className="text-[#B08D57] mr-2">•</span> 100% Waterproof – ideal for wet areas</li>
-                <li><span className="text-[#B08D57] mr-2">•</span> Realistic wood, stone & tile designs</li>
-                <li><span className="text-[#B08D57] mr-2">•</span> Scratch & stain resistant – great for pets</li>
-                <li><span className="text-[#B08D57] mr-2">•</span> Easy to clean & maintain</li>
-              </ul>
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={staggerContainer}
+        className="py-24 bg-[#FBF6F0] px-6"
+      >
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+          <motion.div variants={fadeInUp} className="space-y-8">
+            <h2 className="text-4xl font-serif text-[#3A2F2A]">Waterproof & Resilient</h2>
+            <p className="text-xl text-[#4F433C]">The perfect solution for kitchens and bathrooms, combining the look of stone or wood with 100% waterproof durability.</p>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="p-6 bg-white rounded-2xl shadow-sm border-l-4 border-[#B08D57]">
+                <h4 className="font-bold">Scratch Proof</h4>
+                <p className="text-sm">Ideal for pet owners.</p>
+              </div>
+              <div className="p-6 bg-white rounded-2xl shadow-sm border-l-4 border-[#B08D57]">
+                <h4 className="font-bold">Amtico & Karndean</h4>
+                <p className="text-sm">Official installers.</p>
+              </div>
             </div>
-
-            <div className="bg-[#EFE3D3] p-10 rounded-2xl border border-[#B08D57]/10">
-              <h3 className="text-3xl font-serif mb-6 text-[#3A2F2A]">Perfect For</h3>
-              <p className="text-[#4F433C] text-lg mb-8">
-                Kitchens • Bathrooms • Conservatories • Shops • Offices.
-              </p>
-              <p className="text-[#B08D57] italic font-bold">
-                Premium brands with precise fitting.
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <a href="/contact" className="inline-flex items-center gap-4 bg-[#B08D57] hover:bg-[#8f6f44] text-white px-12 py-6 rounded-xl text-xl font-medium transition shadow-xl">
-              <Phone size={20} /> Get Your Free LVT Quote Today
-            </a>
-          </div>
+          </motion.div>
+          <motion.div variants={fadeInUp} className="grid grid-cols-2 gap-4">
+            {lvtImages.map((img, i) => (
+              <motion.img
+                key={i}
+                whileHover={{ scale: 1.05 }}
+                src={img}
+                className="rounded-2xl h-48 w-full object-cover shadow-lg"
+                alt={`LVT example ${i + 1}`}
+              />
+            ))}
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }

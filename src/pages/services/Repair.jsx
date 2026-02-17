@@ -1,49 +1,143 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Phone, Hammer, Sparkles, ShieldCheck } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Repair() {
+  const repairGallery = [
+    {
+      src: "https://images.unsplash.com/photo-1581850518616-0819c3a24ca1?auto=format&fit=crop&w=800",
+      title: "Hardwood Resurfacing",
+      desc: "Sanding away years of wear"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800",
+      title: "Sectional Replacement",
+      desc: "Seamlessly matching old with new"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800",
+      title: "Finishing & Sealing",
+      desc: "Protective coating for long-lasting shine"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1507652313519-d451e12d596d?auto=format&fit=crop&w=800",
+      title: "Board Repair",
+      desc: "Fixing gaps and loose planks"
+    }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>Floor Repair & Replacement Coventry | AK Flooring & Furniture</title>
+        <title>Floor Repair & Restoration Coventry | AK Flooring</title>
+        <meta name="description" content="Expert floor sanding, board replacement, and restoration services in Coventry. Renew your hardwood, LVT, or laminate floors." />
       </Helmet>
 
-      <section className="py-20 px-6 bg-[#FBF6F0]">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-serif mb-10 text-center text-[#3A2F2A]">Floor Repair & Replacement</h1>
+      {/* Hero Section */}
+     <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+  <img 
+    src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1920&q=80" 
+    className="absolute inset-0 w-full h-full object-cover" 
+    alt="Carpenter repairing wooden furniture and flooring" 
+  />
 
-          <p className="text-xl text-[#4F433C] leading-relaxed mb-12 max-w-4xl mx-auto text-center">
-            Don't replace – restore! We specialise in repairing, sanding, and refinishing damaged flooring.
-          </p>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-[#3A2F2A]/70" />
 
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div>
-              <h2 className="text-3xl font-serif mb-6 text-[#3A2F2A]">Our Repair Services</h2>
-              <ul className="space-y-5 text-lg text-[#4F433C]">
-                <li><span className="text-[#B08D57] mr-2">•</span> Hardwood sanding & refinishing</li>
-                <li><span className="text-[#B08D57] mr-2">•</span> Patch repairs on LVT and laminate</li>
-                <li><span className="text-[#B08D57] mr-2">•</span> Gap filling and board replacement</li>
-                <li><span className="text-[#B08D57] mr-2">•</span> Full section room replacements</li>
-              </ul>
-            </div>
+  <div className="relative z-10 text-center px-6">
+    <motion.h1 
+      initial={{ opacity: 0, y: 20 }} 
+      animate={{ opacity: 1, y: 0 }}
+      className="text-5xl md:text-7xl font-serif text-white mb-4"
+    >
+      Repair & Restoration
+    </motion.h1>
 
-            <div className="bg-[#EFE3D3] p-10 rounded-2xl border border-[#B08D57]/10">
-              <h3 className="text-3xl font-serif mb-6 text-[#3A2F2A]">Issues We Fix</h3>
-              <p className="text-[#4F433C] text-lg mb-8">
-                Scratches • Water damage • Loose boards • Faded finishes.
-              </p>
-              <p className="text-[#B08D57] italic font-bold">
-                Extending the life of your flooring investment.
-              </p>
+    <p className="text-[#B08D57] uppercase tracking-[0.3em] font-medium">
+      Don't Replace — Restore
+    </p>
+  </div>
+</section>
+
+
+
+      {/* Services Detail Section */}
+      <section className="py-24 bg-[#FBF6F0] px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <div className="space-y-8">
+            <h2 className="text-4xl font-serif text-[#3A2F2A]">Expert Craftsmanship for Damaged Floors</h2>
+            <p className="text-lg text-[#4F433C] leading-relaxed">
+              Whether your hardwood has lost its lustre or your laminate has suffered water damage, our restoration team specializes in bringing life back to tired surfaces. We save you the cost of a full replacement by meticulously repairing the foundation.
+            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {[
+                { icon: <Sparkles className="text-[#B08D57]" />, title: "Sanding & Buffing" },
+                { icon: <Hammer className="text-[#B08D57]" />, title: "Gap & Board Fixes" },
+                { icon: <ShieldCheck className="text-[#B08D57]" />, title: "Water Damage Repair" },
+                { icon: <Sparkles className="text-[#B08D57]" />, title: "Stain Removal" }
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-sm">
+                  {item.icon}
+                  <span className="font-semibold text-[#3A2F2A]">{item.title}</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="text-center">
-            <a href="/contact" className="inline-flex items-center gap-4 bg-[#B08D57] hover:bg-[#8f6f44] text-white px-12 py-6 rounded-xl text-xl font-medium transition shadow-xl">
-              <Phone size={20} /> Arrange Free Floor Assessment
-            </a>
+          <div className="relative">
+             <motion.div 
+               whileHover={{ scale: 1.02 }}
+               className="rounded-3xl overflow-hidden shadow-2xl relative z-10"
+             >
+                <img src="https://images.unsplash.com/photo-1581850518616-0819c3a24ca1?auto=format&fit=crop&w=800" alt="Sanding Floor" />
+             </motion.div>
+             <div className="absolute -bottom-6 -right-6 w-full h-full bg-[#B08D57]/20 rounded-3xl -z-10"></div>
           </div>
+        </div>
+      </section>
+
+      {/* Restoration Gallery */}
+      <section className="py-24 bg-white px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-serif text-[#3A2F2A]">Restoration Gallery</h2>
+            <p className="text-[#4F433C] mt-4">See the results of our professional repair and finishing services.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {repairGallery.map((item, i) => (
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                className="group relative rounded-2xl overflow-hidden shadow-lg h-80"
+              >
+                <img src={item.src} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt={item.title} />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#3A2F2A] via-transparent to-transparent opacity-90" />
+                <div className="absolute bottom-0 p-6 text-white">
+                  <h4 className="font-serif text-xl">{item.title}</h4>
+                  <p className="text-sm opacity-80">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 bg-[#EFE3D3] text-center px-6">
+        <div className="max-w-3xl mx-auto">
+          <h3 className="text-3xl md:text-4xl font-serif mb-8 text-[#3A2F2A]">Is your floor looking tired or damaged?</h3>
+          <p className="text-xl text-[#4F433C] mb-10">Arrange a free assessment and let our experts determine if a restoration is right for you.</p>
+          <a 
+            href="/contact" 
+            className="bg-[#B08D57] hover:bg-[#8f6f44] text-white px-10 py-5 rounded-xl font-bold inline-flex items-center gap-3 shadow-xl transition-all hover:scale-105"
+          >
+            <Phone size={22} /> Arrange Free Assessment
+          </a>
         </div>
       </section>
     </>

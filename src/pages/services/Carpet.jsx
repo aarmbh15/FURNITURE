@@ -1,53 +1,120 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.2 } },
+};
 
 export default function Carpet() {
+  const gallery = [
+    "https://images.unsplash.com/photo-1594051664218-09945934ebaa?auto=format&fit=crop&w=800", // Luxury carpet
+    "https://images.unsplash.com/photo-1515542706656-8e6ef17a1edb?auto=format&fit=crop&w=800", // Plush rug
+    "https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=800", // Wool carpet
+    "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&w=800"  // Stair carpet
+  ];
+
   return (
     <>
       <Helmet>
-        <title>Carpet Supply & Installation Coventry | AK Flooring & Furniture</title>
-        <meta name="description" content="Professional carpet supply and expert fitting service in Coventry. Wide range of quality carpets for homes and businesses – free quotes." />
+        <title>Carpet Supply & Installation Coventry | AK Flooring</title>
       </Helmet>
 
-      <section className="py-20 px-6 bg-[#FBF6F0]">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl font-serif mb-10 text-[#3A2F2A]">Carpet Supply & Installation</h1>
-          
-          <p className="text-xl text-[#4F433C] mb-12 leading-relaxed">
-            Looking for luxurious, comfortable and hard-wearing carpets in Coventry? We supply and professionally install top-quality carpets for residential homes, offices, shops, hotels and more.
-          </p>
+      {/* Hero */}
+      <motion.section
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+        className="relative h-[60vh] flex items-center justify-center overflow-hidden"
+      >
+        <img src="https://nazmiyalantiquerugs.com/wp-content/uploads/2023/04/japandi-style-interior-design-nazmiyal.jpg" className="absolute inset-0 w-full h-full object-cover" alt="Luxury Carpet in modern room" />
+        <div className="absolute inset-0 bg-[#3A2F2A]/60" />
+        <div className="relative z-10 text-center px-6">
+          <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-serif text-white mb-4">Carpets & Rugs</motion.h1>
+          <motion.p variants={fadeInUp} className="text-[#B08D57] uppercase tracking-[0.3em] font-medium">Warmth in every step</motion.p>
+        </div>
+      </motion.section>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-serif mb-6 text-[#3A2F2A]">Why Choose Our Carpet Service?</h2>
-              <ul className="space-y-4 text-lg text-[#4F433C]">
-                <li><span className="text-[#B08D57] mr-2">•</span> Huge selection of patterns, colours and pile types</li>
-                <li><span className="text-[#B08D57] mr-2">•</span> Luxury deep-pile to hard-wearing contract carpets</li>
-                <li><span className="text-[#B08D57] mr-2">•</span> Expert measuring and precise fitting</li>
-                <li><span className="text-[#B08D57] mr-2">•</span> Underlay, grippers, door bars supplied & fitted</li>
-                <li><span className="text-[#B08D57] mr-2">•</span> Fast turnaround – most jobs completed in 1–2 days</li>
-              </ul>
+      {/* Main Info */}
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={staggerContainer}
+        className="py-24 bg-[#FBF6F0] px-6"
+      >
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <motion.div variants={fadeInUp}>
+            <h2 className="text-4xl font-serif text-[#3A2F2A] mb-8">Why Choose Our Carpets?</h2>
+            <div className="space-y-6">
+              {[
+                "Luxury deep-pile velvet and saxony options",
+                "Durable wool loops for high-traffic stairs",
+                "Stain-resistant technology for family homes",
+                "Premium underlays for maximum comfort"
+              ].map((text, i) => (
+                <motion.div key={i} variants={fadeInUp} className="flex gap-4 items-start">
+                  <CheckCircle2 className="text-[#B08D57] flex-shrink-0" />
+                  <p className="text-[#4F433C] text-lg">{text}</p>
+                </motion.div>
+              ))}
             </div>
+          </motion.div>
+          <motion.div
+            variants={fadeInUp}
+            whileHover={{ rotate: 2, scale: 1.05, transition: { duration: 0.3 } }}
+            className="rounded-3xl overflow-hidden shadow-2xl"
+          >
+            <img src="https://images.unsplash.com/photo-1575309096767-f5c762d1ec74?auto=format&fit=crop&w=800" alt="Close-up of soft carpet texture" />
+          </motion.div>
+        </div>
+      </motion.section>
 
-            <div className="bg-[#EFE3D3] p-10 rounded-2xl border border-[#B08D57]/10">
-              <h3 className="text-3xl font-serif mb-6 text-[#3A2F2A]">Popular Carpet Uses</h3>
-              <p className="text-[#4F433C] mb-6 text-lg">
-                Bedrooms • Living rooms • Stairs & landings • Offices • Hotels • Restaurants
-              </p>
-              <a href="/contact" className="inline-flex items-center gap-3 text-[#B08D57] hover:text-[#8f6f44] text-lg font-bold transition-colors">
-                Get Your Free Carpet Quote <ArrowRight />
-              </a>
-            </div>
-          </div>
-
-          <div className="mt-20 text-center">
-            <a href="/contact" className="bg-[#B08D57] text-white px-16 py-7 rounded-xl text-2xl font-medium hover:bg-[#8f6f44] transition-all shadow-xl inline-block">
-              Book Free Home Visit & Quote
-            </a>
+      {/* Visual Gallery */}
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={staggerContainer}
+        className="py-24 bg-white px-6"
+      >
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 variants={fadeInUp} className="text-3xl font-serif text-center mb-16">Inspiration Gallery</motion.h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {gallery.map((img, i) => (
+              <motion.img
+                key={i}
+                variants={fadeInUp}
+                whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+                src={img}
+                className="h-64 w-full object-cover rounded-2xl shadow-lg"
+                alt={`Carpet inspiration ${i + 1}`}
+              />
+            ))}
           </div>
         </div>
-      </section>
+      </motion.section>
+
+      {/* CTA */}
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+        className="py-20 bg-[#EFE3D3] text-center px-6"
+      >
+        <h3 className="text-3xl font-serif mb-8">Ready for a free home measurement?</h3>
+        <a href="/contact" className="bg-[#B08D57] text-white px-12 py-5 rounded-xl font-bold inline-flex items-center gap-2 hover:bg-[#8f6f44]">
+          <Phone size={20} /> Book Free Survey
+        </a>
+      </motion.section>
     </>
   );
 }
