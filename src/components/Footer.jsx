@@ -14,7 +14,7 @@ export default function Footer() {
             <img
               src={logo}
               alt="AK Flooring & Furniture"
-              className="h-16 md:h-24 w-auto object-contain block m-0 p-0" 
+              className="h-16 md:h-40 w-auto object-contain block m-0 p-0" 
             />
             <div className="mt-0">
               <h4 className="text-[#B08D57] font-serif text-lg leading-none m-0 p-0">

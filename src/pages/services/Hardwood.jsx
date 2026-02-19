@@ -15,8 +15,8 @@ const staggerContainer = {
 
 export default function Hardwood() {
   const woodGallery = [
-    "https://images.unsplash.com/photo-1581850518616-0819c3a24ca1?auto=format&fit=crop&w=800", // Oak hardwood
-    "https://images.unsplash.com/photo-1600607687940-47a09b6ed9a0?auto=format&fit=crop&w=800", // Walnut floor
+    "https://images.unsplash.com/photo-1600166898405-da9535204843?", // Oak hardwood
+    // "https://images.unsplash.com/photo-1600607687940-47a09b6ed9a0?auto=format&fit=crop&w=800", // Walnut floor
     "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=800", // Parquet
     "https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?auto=format&fit=crop&w=800"  // Engineered wood
   ];
@@ -47,7 +47,7 @@ export default function Hardwood() {
           <motion.img
             variants={fadeInUp}
             whileHover={{ rotate: -2, scale: 1.05 }}
-            src="https://images.unsplash.com/photo-1507652313519-d451e12d596d?auto=format&fit=crop&w=800"
+            src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?"
             className="rounded-3xl shadow-2xl"
             alt="Close-up of hardwood detail"
           />

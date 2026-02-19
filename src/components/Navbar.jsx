@@ -57,7 +57,7 @@ export default function Navbar() {
           <img 
             src={logo} 
             alt="AK Flooring" 
-            className="h-28 md:h-32 w-auto object-contain transition-transform duration-300 hover:scale-105" 
+            className="h-40 md:h-45 w-auto object-contain transition-transform duration-300 hover:scale-105" 
           />
         </Link>
 

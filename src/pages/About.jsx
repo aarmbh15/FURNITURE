@@ -30,9 +30,9 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="grid grid-cols-2 gap-4">
                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600" className="rounded-2xl shadow-lg mt-8" alt="Detail" />
-               <img src="https://images.unsplash.com/photo-1556911220-e15224bbaf39?auto=format&fit=crop&w=600" className="rounded-2xl shadow-lg" alt="Workshop" />
+               <img src="https://images.unsplash.com/photo-1505693314120-0d443867891c?" className="rounded-2xl shadow-lg" alt="Workshop" />
                <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=600" className="rounded-2xl shadow-lg -mt-8" alt="Flooring" />
-               <img src="https://images.unsplash.com/photo-1616486341352-7edecbf69014?auto=format&fit=crop&w=600" className="rounded-2xl shadow-lg" alt="LVT Detail" />
+               <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?" className="rounded-2xl shadow-lg" alt="LVT Detail" />
             </div>
             
             <div className="space-y-6">
@@ -71,13 +71,13 @@ export default function About() {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="h-64 rounded-xl overflow-hidden shadow-md">
-              <img src="https://images.unsplash.com/photo-1600607687940-47a09b6ed9a0?auto=format&fit=crop&w=600" className="w-full h-full object-cover" alt="Showroom 1" />
+              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?" className="w-full h-full object-cover" alt="Showroom 1" />
             </div>
             <div className="h-64 rounded-xl overflow-hidden shadow-md">
               <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600" className="w-full h-full object-cover" alt="Showroom 2" />
             </div>
             <div className="h-64 rounded-xl overflow-hidden shadow-md">
-              <img src="https://images.unsplash.com/photo-1600585154526-990dcea4db0d?auto=format&fit=crop&w=600" className="w-full h-full object-cover" alt="Showroom 3" />
+              <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?" className="w-full h-full object-cover" alt="Showroom 3" />
             </div>
             <div className="h-64 rounded-xl overflow-hidden shadow-md">
               <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=600" className="w-full h-full object-cover" alt="Showroom 4" />

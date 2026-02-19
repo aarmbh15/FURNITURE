@@ -51,17 +51,17 @@ const highlights = [
   {
     title: "Timeless Craftsmanship",
     desc: "Hand-selected premium woods, rich grains, enduring finishes — crafted with precision for lasting beauty and character.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.pexels.com/photos/6585598/pexels-photo-6585598.jpeg?",
   },
   {
     title: "Refined Comfort & Style",
     desc: "Sumptuous carpets, warm hardwoods, and luxurious bedroom collections installed to create inviting, elegant living spaces.",
-    image: "https://images.unsplash.com/photo-1618221195710-dd2dabb60b29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?",
   },
   {
     title: "Flawless Installation",
     desc: "Precision fitting, perfect transitions, and meticulous attention to every detail — professional results you can see and feel.",
-    image: "https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?",
   },
 ];
 
@@ -85,7 +85,7 @@ const flooringImages = [
     desc: "Durable and effortlessly elegant"
   },
   {
-    src: "https://images.unsplash.com/photo-1581850518616-0819c3a24ca1?auto=format&fit=crop&w=1200",
+    src: "https://images.pexels.com/photos/6707628/pexels-photo-6707628.jpeg?",
     alt: "Herringbone Oak",
     label: "Herringbone Oak",
     desc: "Classic patterns for modern living"
@@ -97,7 +97,7 @@ const flooringImages = [
     desc: "Sleek, resilient, and versatile"
   },
   {
-    src: "https://images.unsplash.com/photo-1594051664218-09945934ebaa?auto=format&fit=crop&w=1200",
+    src: "https://images.pexels.com/photos/4846097/pexels-photo-4846097.jpeg?",
     alt: "Wool Loop Carpet",
     label: "Wool Loop Collection",
     desc: "Natural fibers for high-traffic areas"
@@ -239,6 +239,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
 
       {/* Flooring Showcase */}
   {/* Exceptional Flooring - Horizontal Slider */}
@@ -299,6 +300,42 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+      {/* Flooring Customizer CTA */}
+<section className="py-24 bg-[#EFE3D3] text-center px-6">
+  <motion.div
+    className="max-w-5xl mx-auto"
+    initial={{ opacity: 0, y: 60 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.9 }}
+    viewport={{ once: true }}
+  >
+    <h2 className="text-4xl md:text-6xl font-serif text-[#3A2F2A] mb-8">
+      Visualize Before You Decide
+    </h2>
+
+    <p className="text-xl md:text-2xl text-[#4F433C] mb-12 max-w-3xl mx-auto leading-relaxed">
+      Upload your room and explore different flooring styles instantly with our interactive visualizer.
+    </p>
+
+    <motion.a
+      href="https://floordesign.ai/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-3 
+        px-8 py-4 md:px-10 md:py-5 
+        bg-[#B08D57] hover:bg-[#8f6f44] 
+        text-white rounded-xl 
+        text-lg md:text-xl font-medium 
+        transition-all duration-500 
+        shadow-xl hover:shadow-2xl"
+      whileHover={{ scale: 1.06 }}
+      whileTap={{ scale: 0.97 }}
+    >
+      Try Flooring Customizer
+      <ArrowRight size={22} />
+    </motion.a>
+  </motion.div>
+</section>
       {/*  Furniture Showcase */}
       <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden bg-[#EFE3D3]">
         <div className="absolute inset-0">
@@ -386,7 +423,7 @@ export default function Home() {
                 }
               }}
             >
-              <a
+              {/* <a
                 href="/furniture"
                 className="
                   inline-flex items-center gap-3 
@@ -401,7 +438,7 @@ export default function Home() {
               >
                 Discover Collections
                 <ArrowRight size={22} className="transition-transform group-hover:translate-x-1" />
-              </a>
+              </a> */}
             </motion.div>
           </motion.div>
         </div>
