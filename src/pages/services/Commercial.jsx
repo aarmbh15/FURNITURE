@@ -58,9 +58,9 @@ export default function Commercial() {
       >
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <motion.div variants={fadeInUp} className="space-y-8">
-            <h2 className="text-4xl font-serif text-[#3A2F2A]">Heavy-Duty Performance</h2>
+            <h2 className="text-4xl font-serif text-[#3A2F2A]">Heavy Duty Performance</h2>
             <p className="text-lg text-[#4F433C] leading-relaxed">
-              We provide Coventry businesses with flooring solutions that balance high-end aesthetics with extreme durability. From office blocks to retail hubs, we ensure your floor stands the test of time.
+              We provide Coventry businesses with flooring solutions that balance high end aesthetics with extreme durability. From office blocks to retail hubs, we ensure your floor stands the test of time.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[

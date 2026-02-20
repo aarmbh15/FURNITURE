@@ -24,7 +24,7 @@ export default function Contact() {
                   <Phone className="text-[#B08D57] mt-1" size={28} />
                   <div>
                     <p className="font-medium text-[#3A2F2A]">Call Us</p>
-                    <a href="tel:02476000000" className="text-[#B08D57] hover:text-[#8f6f44] transition-colors underline-offset-4 hover:underline">024 76 000 000</a>
+                    <a href="tel:024 77050079" className="text-[#B08D57] hover:text-[#8f6f44] transition-colors underline-offset-4 hover:underline">024 77050079</a>
                   </div>
                 </div>
 

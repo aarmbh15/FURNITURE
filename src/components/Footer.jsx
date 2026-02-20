@@ -60,7 +60,7 @@ export default function Footer() {
             <div className="space-y-3 text-sm">
               <a href="tel:02476000000" className="flex items-center gap-3 hover:text-[#B08D57] transition-colors">
                 <div className="bg-[#B08D57]/20 p-1.5 rounded-full"><Phone size={16} /></div>
-                <span>024 76 000 000</span>
+                <span>024 77050079</span>
               </a>
               <a href="mailto:info@akflooringfurniture.co.uk" className="flex items-center gap-3 hover:text-[#B08D57] transition-colors">
                 <div className="bg-[#B08D57]/20 p-1.5 rounded-full"><Mail size={16} /></div>

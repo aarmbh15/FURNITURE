@@ -50,7 +50,7 @@ const staggerContainer = {
 const highlights = [
   {
     title: "Timeless Craftsmanship",
-    desc: "Hand-selected premium woods, rich grains, enduring finishes — crafted with precision for lasting beauty and character.",
+    desc: "Hand selected premium woods, rich grains, enduring finishes crafted with precision for lasting beauty and character.",
     image: "https://images.pexels.com/photos/6585598/pexels-photo-6585598.jpeg?",
   },
   {
@@ -60,7 +60,7 @@ const highlights = [
   },
   {
     title: "Flawless Installation",
-    desc: "Precision fitting, perfect transitions, and meticulous attention to every detail — professional results you can see and feel.",
+    desc: "Precision fitting, perfect transitions, and meticulous attention to every detail professional results you can see and feel.",
     image: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?",
   },
 ];
@@ -408,7 +408,7 @@ export default function Home() {
                 }
               }}
             >
-              Premium beds, elegant wardrobes — crafted for restful sophistication and timeless style.
+              Premium beds, elegant wardrobes crafted for restful sophistication and timeless style.
             </motion.p>
 
             {/* CTA button – appears last */}

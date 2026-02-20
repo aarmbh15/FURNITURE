@@ -55,9 +55,9 @@ export default function Carpet() {
             <h2 className="text-4xl font-serif text-[#3A2F2A] mb-8">Why Choose Our Carpets?</h2>
             <div className="space-y-6">
               {[
-                "Luxury deep-pile velvet and saxony options",
-                "Durable wool loops for high-traffic stairs",
-                "Stain-resistant technology for family homes",
+                "Luxury deep pile velvet and saxony options",
+                "Durable wool loops for high traffic stairs",
+                "Stain resistant technology for family homes",
                 "Premium underlays for maximum comfort"
               ].map((text, i) => (
                 <motion.div key={i} variants={fadeInUp} className="flex gap-4 items-start">
