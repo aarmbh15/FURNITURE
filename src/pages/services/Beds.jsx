@@ -2,6 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Star, ShieldCheck, Truck } from "lucide-react";
+import img3 from "../../assets/img3.webp"
+import img4 from "../../assets/img4.webp"
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -15,9 +17,9 @@ const staggerContainer = {
 
 export default function Beds() {
   const bedImages = [
-    "https://images.unsplash.com/photo-1505693419148-de1967c93888?auto=format&fit=crop&w=800", // Luxury bed
+    img3, // Luxury bed
     "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800", // Modern bedroom
-    "https://images.unsplash.com/photo-1616486341352-7edecbf69014?auto=format&fit=crop&w=800", // Cozy bed
+    img4, // Cozy bed
     "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800", // Elegant frame
     "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?auto=format&fit=crop&w=800", // Designer bed
     "https://images.unsplash.com/photo-1560448075-bb485b067938?auto=format&fit=crop&w=800"  // Velvet headboard

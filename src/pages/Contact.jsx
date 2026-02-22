@@ -40,7 +40,7 @@ export default function Contact() {
                   <MapPin className="text-[#B08D57] mt-1" size={28} />
                   <div>
                     <p className="font-medium text-[#3A2F2A]">Area Served</p>
-                    <p className="text-[#4F433C]">Coventry & surrounding areas</p>
+                    <p className="text-[#4F433C]">344a Foleshill Rd, Foleshill, <br/>Coventry CV6 5AJ</p>
                   </div>
                 </div>
               </div>

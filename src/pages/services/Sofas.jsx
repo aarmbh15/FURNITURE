@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import img3 from "../../assets/img3.webp"
+import img4 from "../../assets/img4.webp"
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -18,8 +20,7 @@ export default function Sofas() {
     "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=800", // Leather sofa
     "https://images.unsplash.com/photo-1550254478-ead40cc54513?auto=format&fit=crop&w=800", // Modern lounge
     "https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=800", // Sectional
-    "https://images.unsplash.com/photo-1583847268964-b28dc2f51ac9?auto=format&fit=crop&w=800", // Velvet sofa
-    "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?auto=format&fit=crop&w=800"  // Designer sofa
+    img3,img4 // Designer sofa
   ];
 
   return (

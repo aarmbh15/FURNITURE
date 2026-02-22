@@ -2,6 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle2, Phone, Zap, MousePointer2 } from "lucide-react";
 import { motion } from "framer-motion";
+import img1 from "../../assets/img1.webp";
+import img2 from "../../assets/img2.webp"
+import img3 from "../../assets/img3.webp";
+import img4 from "../../assets/img4.webp"
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -16,10 +20,7 @@ const staggerContainer = {
 export default function Laminate() {
   const gallery = [
     "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800", // Laminate wood
-    "https://images.unsplash.com/photo-1600585152220-90343e00d957?auto=format&fit=crop&w=800", // Modern laminate
-    "https://images.unsplash.com/photo-1581850518616-0819c3a24ca1?auto=format&fit=crop&w=800", // Durable floor
-    "https://images.unsplash.com/photo-1616486341352-7edecbf69014?auto=format&fit=crop&w=800", // Kitchen laminate
-    "https://images.unsplash.com/photo-1600607687940-47a09b6ed9a0?auto=format&fit=crop&w=800", // Oak look
+   img1,img2,img3,img4, // Oak look
     "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&w=800"  // Pet-friendly
   ];
 

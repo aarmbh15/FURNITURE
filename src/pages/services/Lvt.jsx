@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import img4 from "../../assets/img4.webp"
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -17,7 +18,7 @@ export default function Lvt() {
     "https://cdn.mos.cms.futurecdn.net/sfjYgvRrHMnumPQV9ePUpG.jpg", // LVT in kitchen
     "https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=800", // Waterproof LVT
     "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&w=800", // Stone look
-    "https://images.unsplash.com/photo-1600585154526-990dcea4db0d?auto=format&fit=crop&w=800"  // Wood look LVT
+    img4  // Wood look LVT
   ];
 
   return (

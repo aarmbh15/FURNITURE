@@ -68,7 +68,7 @@ export default function Footer() {
               </a>
               <div className="flex items-start gap-3">
                 <div className="bg-[#B08D57]/20 p-1.5 rounded-full"><MapPin size={16} /></div>
-                <span className="text-xs leading-tight">Serving Coventry & <br/>Surrounding Areas</span>
+                <span className="text-xs leading-tight">344a Foleshill Rd, Foleshill, <br/>Coventry CV6 5AJ </span>
               </div>
               <div className="pt-2 flex gap-3">
                 <a href="#" className="bg-[#B08D57] hover:bg-white hover:text-[#3A2F2A] p-2 rounded-full transition-all duration-300">

@@ -2,11 +2,14 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Phone, Hammer, Sparkles, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
+import img4 from "../../assets/img4.webp"
+import img2 from "../../assets/img2.webp"
+import img5 from "../../assets/img5.webp"
 
 export default function Repair() {
   const repairGallery = [
     {
-      src: "https://images.unsplash.com/photo-1581850518616-0819c3a24ca1?auto=format&fit=crop&w=800",
+      src: img4,
       title: "Hardwood Resurfacing",
       desc: "Sanding away years of wear"
     },
@@ -21,7 +24,7 @@ export default function Repair() {
       desc: "Protective coating for long-lasting shine"
     },
     {
-      src: "https://images.unsplash.com/photo-1507652313519-d451e12d596d?auto=format&fit=crop&w=800",
+      src: img2,
       title: "Board Repair",
       desc: "Fixing gaps and loose planks"
     }
@@ -86,15 +89,20 @@ export default function Repair() {
             </div>
           </div>
 
-          <div className="relative">
-             <motion.div 
-               whileHover={{ scale: 1.02 }}
-               className="rounded-3xl overflow-hidden shadow-2xl relative z-10"
-             >
-                <img src="https://images.unsplash.com/photo-1581850518616-0819c3a24ca1?auto=format&fit=crop&w=800" alt="Sanding Floor" />
-             </motion.div>
-             <div className="absolute -bottom-6 -right-6 w-full h-full bg-[#B08D57]/20 rounded-3xl -z-10"></div>
-          </div>
+         <div className="relative">
+  <motion.div
+    whileHover={{ scale: 1.02 }}
+    className="relative z-10 rounded-3xl overflow-hidden shadow-2xl"
+  >
+    <img
+      src={img5}
+      alt="Sanding Floor"
+      className="w-full h-full object-cover block rounded-3xl"
+    />
+  </motion.div>
+
+  <div className="absolute -bottom-6 -right-6 w-full h-full bg-[#B08D57]/20 rounded-3xl -z-10"></div>
+</div>
         </div>
       </section>
 

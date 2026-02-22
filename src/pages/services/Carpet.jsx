@@ -2,6 +2,12 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { motion } from "framer-motion";
+import img6 from "../../assets/img6.webp"
+import img7 from "../../assets/img7.webp"
+import img8 from "../../assets/img8.webp"
+import img9 from "../../assets/img9.webp"
+import img10 from "../../assets/img10.webp"
+import img11 from "../../assets/img11.webp"
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -15,10 +21,7 @@ const staggerContainer = {
 
 export default function Carpet() {
   const gallery = [
-    "https://images.unsplash.com/photo-1594051664218-09945934ebaa?auto=format&fit=crop&w=800", // Luxury carpet
-    "https://images.unsplash.com/photo-1515542706656-8e6ef17a1edb?auto=format&fit=crop&w=800", // Plush rug
-    "https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=800", // Wool carpet
-    "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&w=800"  // Stair carpet
+    img11,img10,img9,img8  // Stair carpet
   ];
 
   return (
@@ -34,7 +37,7 @@ export default function Carpet() {
         variants={fadeInUp}
         className="relative h-[60vh] flex items-center justify-center overflow-hidden"
       >
-        <img src="https://nazmiyalantiquerugs.com/wp-content/uploads/2023/04/japandi-style-interior-design-nazmiyal.jpg" className="absolute inset-0 w-full h-full object-cover" alt="Luxury Carpet in modern room" />
+        <img src={img7} className="absolute inset-0 w-full h-full object-cover" alt="Luxury Carpet in modern room" />
         <div className="absolute inset-0 bg-[#3A2F2A]/60" />
         <div className="relative z-10 text-center px-6">
           <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-serif text-white mb-4">Carpets & Rugs</motion.h1>
@@ -67,13 +70,20 @@ export default function Carpet() {
               ))}
             </div>
           </motion.div>
-          <motion.div
-            variants={fadeInUp}
-            whileHover={{ rotate: 2, scale: 1.05, transition: { duration: 0.3 } }}
-            className="rounded-3xl overflow-hidden shadow-2xl"
-          >
-            <img src="https://images.unsplash.com/photo-1575309096767-f5c762d1ec74?auto=format&fit=crop&w=800" alt="Close-up of soft carpet texture" />
-          </motion.div>
+          <div className="relative">
+  <motion.div
+    whileHover={{ scale: 1.02 }}
+    className="relative z-10 rounded-3xl overflow-hidden shadow-2xl"
+  >
+    <img
+      src={img6}
+      alt="Sanding Floor"
+      className="w-full h-full object-cover block rounded-3xl"
+    />
+  </motion.div>
+
+  <div className="absolute -bottom-6 -right-6 w-full h-full bg-[#B08D57]/20 rounded-3xl -z-10"></div>
+</div>
         </div>
       </motion.section>
 

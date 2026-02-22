@@ -2,6 +2,9 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle2, Phone, Heart, Star } from "lucide-react";
 import { motion } from "framer-motion";
+import img3 from "../../assets/img3.webp";
+import img2 from "../../assets/img2.webp";
+import img1 from "../../assets/img1.webp";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -15,13 +18,18 @@ const staggerContainer = {
 
 export default function Residential() {
   const gallery = [
-    "https://images.unsplash.com/photo-1600585154526-990dcea4db0d?auto=format&fit=crop&w=800", // Home interior
-    "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=800", // Living room
-    "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800", // Kitchen
-    "https://images.unsplash.com/photo-1616486341352-7edecbf69014?auto=format&fit=crop&w=800", // Bedroom
-    "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?auto=format&fit=crop&w=800", // Family room
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800"  // Modern home
-  ];
+  img2, // Local image (replaces 1st)
+
+  "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=800", // Living room
+
+  "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800", // Kitchen
+
+  img1, // Local image (replaces 4th)
+
+  "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?auto=format&fit=crop&w=800", // Family room
+
+  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800"  // Modern home
+];
 
   return (
     <>
@@ -80,7 +88,11 @@ export default function Residential() {
             whileHover={{ rotate: 1, scale: 1.05 }}
             className="grid grid-cols-2 gap-4"
           >
-            <img src="https://images.unsplash.com/photo-1594051664218-09945934ebaa?auto=format&fit=crop&w=400" className="rounded-2xl shadow-lg" alt="Cozy home carpet" />
+            <img
+  src={img3}
+  alt="Cozy home carpet"
+  className="rounded-2xl shadow-lg w-full h-auto object-cover"
+/>
             <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=400" className="rounded-2xl shadow-lg mt-8" alt="Modern home flooring" />
           </motion.div>
         </div>

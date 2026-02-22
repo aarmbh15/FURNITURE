@@ -55,7 +55,7 @@ export default function Navbar() {
           <img 
             src={logo} 
             alt="AK Flooring" 
-            className="h-40 w-auto object-contain" 
+            className="h-45 w-auto object-contain" 
           />
         </Link>
 
@@ -140,117 +140,117 @@ export default function Navbar() {
       {/* MOBILE MENU */}
     {/* MOBILE MENU */}
 {mobileOpen && (
-  <div className="md:hidden bg-[#FBF6F0]/95 backdrop-blur-xl border-t border-[#EFE3D3]/50 px-6 py-6 space-y-5 text-[#3A2F2A] overflow-y-auto max-h-[85vh]">
+  <div className="md:hidden bg-[#FBF6F0]/95 backdrop-blur-xl border-t border-[#EFE3D3]/50 px-6 py-8 text-[#3A2F2A] overflow-y-auto max-h-[85vh]">
 
-    {/* HOME */}
-    <Link 
-      to="/" 
-      onClick={() => setMobileOpen(false)} 
-      className="flex items-center gap-3 text-lg font-semibold"
-    >
-      <FaHome className="text-[#B08D57]" />
-      HOME
-    </Link>
+    <div className="space-y-6">
 
-    {/* ABOUT */}
-    <Link 
-      to="/about" 
-      onClick={() => setMobileOpen(false)} 
-      className="flex items-center gap-3 text-lg font-semibold"
-    >
-      <FaInfoCircle className="text-[#B08D57]" />
-      ABOUT
-    </Link>
-
-    {/* FLOORING DROPDOWN */}
-    <div className="border-b border-[#EFE3D3]/40 pb-3">
-      <button 
-        onClick={() => setMobileFlooringOpen(!mobileFlooringOpen)} 
-        className="flex items-center justify-between w-full text-lg font-semibold"
+      {/* HOME */}
+      <Link 
+        to="/" 
+        onClick={() => setMobileOpen(false)} 
+        className="flex items-center gap-3 text-lg font-semibold"
       >
-        <span className="flex items-center gap-3">
-          <FaCogs className="text-[#B08D57]" />
-          FLOORING
-        </span>
-        <ChevronDown 
-          size={20} 
-          className={`transition-transform duration-300 ${
-            mobileFlooringOpen ? "rotate-180" : ""
-          }`} 
-        />
-      </button>
+        <FaHome className="text-[#B08D57]" />
+        HOME
+      </Link>
 
-      {/* Dropdown Items */}
-      <div
-        className={`transition-all duration-300 overflow-hidden ${
-          mobileFlooringOpen ? "max-h-[500px] mt-4" : "max-h-0"
-        }`}
+      {/* ABOUT */}
+      <Link 
+        to="/about" 
+        onClick={() => setMobileOpen(false)} 
+        className="flex items-center gap-3 text-lg font-semibold"
       >
-        <div className="pl-6 space-y-4 border-l-2 border-[#EFE3D3]">
-          {flooringLinks.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              onClick={() => setMobileOpen(false)}
-              className="block text-base hover:text-[#B08D57]"
-            >
-              {item.name}
-            </Link>
-          ))}
+        <FaInfoCircle className="text-[#B08D57]" />
+        ABOUT
+      </Link>
+
+      {/* FLOORING */}
+      <div>
+        <button 
+          onClick={() => setMobileFlooringOpen(!mobileFlooringOpen)} 
+          className="flex items-center justify-between w-full text-lg font-semibold"
+        >
+          <span className="flex items-center gap-3">
+            <FaCogs className="text-[#B08D57]" />
+            FLOORING
+          </span>
+          <ChevronDown 
+            size={20} 
+            className={`transition-transform duration-300 ${
+              mobileFlooringOpen ? "rotate-180" : ""
+            }`} 
+          />
+        </button>
+
+        <div
+          className={`transition-all duration-300 overflow-hidden ${
+            mobileFlooringOpen ? "max-h-[500px] mt-4" : "max-h-0"
+          }`}
+        >
+          <div className="pl-6 space-y-4 mt-4">
+            {flooringLinks.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={() => setMobileOpen(false)}
+                className="block text-base hover:text-[#B08D57]"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
 
-    {/* CARPET (Separate) */}
-    <Link 
-      to="/services/carpet-supply-installation" 
-      onClick={() => setMobileOpen(false)} 
-      className="flex items-center gap-3 text-lg font-semibold"
-    >
-      <FaUsers className="text-[#B08D57]" />
-      CARPET
-    </Link>
-
-    {/* FURNITURE DROPDOWN */}
-    <div className="border-b border-[#EFE3D3]/40 pb-3">
-      <button 
-        onClick={() => setMobileFurnitureOpen(!mobileFurnitureOpen)} 
-        className="flex items-center justify-between w-full text-lg font-semibold"
+      {/* CARPET */}
+      <Link 
+        to="/services/carpet-supply-installation" 
+        onClick={() => setMobileOpen(false)} 
+        className="flex items-center gap-3 text-lg font-semibold"
       >
-        <span className="flex items-center gap-3">
-          <FaBriefcase className="text-[#B08D57]" />
-          FURNITURE
-        </span>
-        <ChevronDown 
-          size={20} 
-          className={`transition-transform duration-300 ${
-            mobileFurnitureOpen ? "rotate-180" : ""
-          }`} 
-        />
-      </button>
+        <FaUsers className="text-[#B08D57]" />
+        CARPET
+      </Link>
 
-      <div
-        className={`transition-all duration-300 overflow-hidden ${
-          mobileFurnitureOpen ? "max-h-[300px] mt-4" : "max-h-0"
-        }`}
-      >
-        <div className="pl-6 space-y-4 border-l-2 border-[#EFE3D3]">
-          {furnitureLinks.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              onClick={() => setMobileOpen(false)}
-              className="block text-base hover:text-[#B08D57]"
-            >
-              {item.name}
-            </Link>
-          ))}
+      {/* FURNITURE */}
+      <div>
+        <button 
+          onClick={() => setMobileFurnitureOpen(!mobileFurnitureOpen)} 
+          className="flex items-center justify-between w-full text-lg font-semibold"
+        >
+          <span className="flex items-center gap-3">
+            <FaBriefcase className="text-[#B08D57]" />
+            FURNITURE
+          </span>
+          <ChevronDown 
+            size={20} 
+            className={`transition-transform duration-300 ${
+              mobileFurnitureOpen ? "rotate-180" : ""
+            }`} 
+          />
+        </button>
+
+        <div
+          className={`transition-all duration-300 overflow-hidden ${
+            mobileFurnitureOpen ? "max-h-[300px] mt-4" : "max-h-0"
+          }`}
+        >
+          <div className="pl-6 space-y-4 mt-4">
+            {furnitureLinks.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={() => setMobileOpen(false)}
+                className="block text-base hover:text-[#B08D57]"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
 
-    {/* CONTACT BUTTON */}
-    <div className="pt-4">
+      {/* CONTACT */}
       <Link 
         to="/contact" 
         onClick={() => setMobileOpen(false)} 
@@ -259,8 +259,8 @@ export default function Navbar() {
         <FaPhoneAlt />
         CONTACT US
       </Link>
-    </div>
 
+    </div>
   </div>
 )}
     </nav>

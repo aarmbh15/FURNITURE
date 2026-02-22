@@ -2,6 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle2, Phone, Building2, Shield } from "lucide-react";
 import { motion } from "framer-motion";
+import img2 from "../../assets/img2.webp";
+import img1 from "../../assets/img1.webp";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -16,9 +18,9 @@ const staggerContainer = {
 export default function Commercial() {
   const gallery = [
     "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800", // Office space
-    "https://images.unsplash.com/photo-1504384308090-c89eec2adc39?auto=format&fit=crop&w=800", // Retail floor
+    img2, // Retail floor
     "https://images.unsplash.com/photo-1564069114553-7215e1ff1890?auto=format&fit=crop&w=800", // Commercial installation
-    "https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=800", // High-traffic area
+    img1, // High-traffic area
     "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800", // Business lobby
     "https://images.unsplash.com/photo-1621600411688-4be93cd68504?auto=format&fit=crop&w=800"  // Modern commercial
   ];

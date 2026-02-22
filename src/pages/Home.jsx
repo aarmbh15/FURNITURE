@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { ArrowRight, Phone } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { lazy, Suspense, useRef } from "react";
+import video2 from "../assets/video2.mp4";
 
 const fadeInFromLeft = {
   hidden: { opacity: 0, x: -60 },
@@ -116,70 +117,131 @@ export default function Home() {
       </Helmet>
 
       {/* Hero Section */}
-    <section
-        className="relative min-h-[90vh] md:min-h-[100vh] flex items-center bg-cover bg-center bg-fixed"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=90')",
-        }}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+
+  {/* Background Video */}
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover"
+  >
+    <source src={video2} type="video/mp4" />
+  </video>
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/65" />
+
+  <motion.div
+    className="relative z-10 max-w-7xl mx-auto px-6 py-20 md:py-32 text-center md:text-left"
+    initial="hidden"
+    animate="visible"
+    variants={staggerContainer}
+  >
+    <motion.h1
+      variants={fadeInUp}
+      className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-extrabold text-white leading-tight"
+    >
+      Warm Luxury
+      <br className="hidden md:block" />
+      <span className="block mt-3 text-[#B08D57]">
+        Flooring & Furniture
+      </span>
+    </motion.h1>
+
+    <motion.p
+      variants={fadeInUp}
+      className="mt-6 text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto md:mx-0"
+    >
+      Timeless materials. Exceptional comfort. Masterful installation.
+    </motion.p>
+
+    <motion.div
+      variants={fadeInUp}
+      className="mt-10 flex flex-col sm:flex-row gap-5 justify-center md:justify-start"
+    >
+      <motion.a
+        href="/contact"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.97 }}
+        className="flex items-center justify-center gap-3 bg-[#B08D57] hover:bg-[#8f6f44] text-white px-8 py-4 rounded-xl text-lg font-medium shadow-xl transition"
       >
-        {/* Adjusted Overlay: Reduced opacity from 0.65+ to 0.30+ to let the image show more clearly */}
-        {/* <div className="absolute inset-0 bg-gradient-to-b from-[#3A2F2A]/70 via-[#3A2F2A]/60 to-[#3A2F2A]/50" /> */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/50" />
-        
-        <motion.div
-          className="relative z-10 max-w-7xl mx-auto px-6 py-20 md:py-32 text-center md:text-left"
-          initial="hidden"
-          animate="visible"
-          variants={staggerContainer}
-        >
-          <motion.h1
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-extrabold text-[#f0eceb] leading-[1.05] tracking-tight drop-shadow-sm"
-            variants={fadeInUp}
-          >
-            Warm Luxury
-            <br className="hidden md:block" />
-            <span className="text-[#B08D57] block mt-2 md:mt-4">Flooring & Furniture</span>
-          </motion.h1>
+        <Phone size={20} />
+        Contact Us
+      </motion.a>
 
-          <motion.p
-            className="mt-8 text-xl md:text-2xl lg:text-3xl text-[#f0eceb] font-medium max-w-4xl mx-auto md:mx-0 drop-shadow-sm"
-            variants={fadeInUp}
-          >
-            Timeless materials. Exceptional comfort. Masterful installation.
-          </motion.p>
+      <motion.a
+        href="/services"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.97 }}
+        className="flex items-center justify-center gap-3 border-2 border-[#B08D57] bg-white/20 backdrop-blur text-white px-8 py-4 rounded-xl text-lg font-medium transition"
+      >
+        Explore Collections
+        <ArrowRight size={18} />
+      </motion.a>
+    </motion.div>
+  </motion.div>
+</section>
+<section className="py-24 bg-[#FBF6F0] px-6">
+  <motion.div
+    className="max-w-6xl mx-auto bg-[#2A2420] rounded-[2rem] overflow-hidden shadow-2xl flex flex-col md:flex-row items-center"
+    initial={{ opacity: 0, y: 60 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.9 }}
+    viewport={{ once: true }}
+  >
+    {/* Left Side: Visual Teaser */}
+    <div className="w-full md:w-1/2 h-[300px] md:h-[500px] relative">
+      <img 
+        src="https://images.unsplash.com/photo-1581850518616-cee81f77a8e8?auto=format&fit=crop&w=1000" 
+        className="w-full h-full object-cover opacity-80"
+        alt="Visualizer Preview"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#2A2420] via-transparent to-transparent hidden md:block" />
+      <div className="absolute inset-0 flex items-center justify-center">
+         <div className="bg-white/10 backdrop-blur-md p-4 rounded-full border border-white/20">
+            <div className="bg-white text-[#2A2420] p-4 rounded-full shadow-lg">
+               <ArrowRight size={32} className="-rotate-45" />
+            </div>
+         </div>
+      </div>
+    </div>
 
-         <motion.div
-            className="mt-12 flex flex-col sm:flex-row gap-6 justify-center md:justify-start"
-            variants={fadeInUp}
-          >
-            {/* Contact Us Button */}
-            <motion.a
-              href="/contact"
-              className="group bg-[#B08D57] hover:bg-[#8f6f44] text-white px-10 py-6 rounded-xl text-xl font-medium transition-all duration-500 shadow-xl hover:shadow-2xl flex items-center justify-center gap-3 sm:min-w-[260px]"
-              whileHover={{ scale: 1.05, boxShadow: "0 25px 50px -12px rgba(176, 141, 87, 0.4)" }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <Phone size={22} />
-              Contact Us
-            </motion.a>
+    {/* Right Side: Content */}
+    <div className="w-full md:w-1/2 p-10 md:p-16 text-left">
+      <span className="text-[#B08D57] font-bold tracking-widest uppercase text-sm mb-4 block">
+        Interactive Experience
+      </span>
+      <h2 className="text-4xl md:text-5xl font-serif text-[#f0eceb] mb-6 leading-tight">
+        Visualize Your Room <br /> 
+        <span className="italic text-[#B08D57]">Before</span> You Decide
+      </h2>
 
-            {/* Explore Collections Button */}
-            <motion.a
-              href="/services"
-              className="group border-2 border-[#B08D57] bg-white/20 backdrop-blur-md text-[#3A2F2A] hover:bg-white/40 px-10 py-6 rounded-xl text-xl font-medium transition-all duration-500 hover:shadow-xl flex items-center justify-center gap-3 sm:min-w-[260px]"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Explore Collections
-              <ArrowRight
-                size={20}
-                className="group-hover:translate-x-2 transition-transform duration-300"
-              />
-            </motion.a>
-          </motion.div>
-          </motion.div>
-      </section>
+      <p className="text-lg md:text-xl text-white/70 mb-10 leading-relaxed">
+        Eliminate the guesswork. Upload a photo of your space and instantly see how our premium flooring transforms your home.
+      </p>
+
+      <motion.a
+        href="https://floordesign.ai/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-4 
+          px-10 py-5 
+          bg-[#B08D57] hover:bg-[#C5A373] 
+          text-white rounded-xl 
+          text-xl font-semibold 
+          transition-all duration-500 
+          shadow-xl hover:shadow-[0_20px_40px_rgba(176,141,87,0.3)]"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.97 }}
+      >
+        Launch Visualizer
+        <ArrowRight size={22} />
+      </motion.a>
+    </div>
+  </motion.div>
+</section>
       {/* Trust Highlights */}
       <section className="py-16 md:py-24 lg:py-32 bg-[#EFE3D3] overflow-hidden">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
@@ -301,41 +363,8 @@ export default function Home() {
         </div>
       </section>
       {/* Flooring Customizer CTA */}
-<section className="py-24 bg-[#EFE3D3] text-center px-6">
-  <motion.div
-    className="max-w-5xl mx-auto"
-    initial={{ opacity: 0, y: 60 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.9 }}
-    viewport={{ once: true }}
-  >
-    <h2 className="text-4xl md:text-6xl font-serif text-[#3A2F2A] mb-8">
-      Visualize Before You Decide
-    </h2>
+{/* Flooring Customizer CTA - Enhanced Version */}
 
-    <p className="text-xl md:text-2xl text-[#4F433C] mb-12 max-w-3xl mx-auto leading-relaxed">
-      Upload your room and explore different flooring styles instantly with our interactive visualizer.
-    </p>
-
-    <motion.a
-      href="https://floordesign.ai/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center gap-3 
-        px-8 py-4 md:px-10 md:py-5 
-        bg-[#B08D57] hover:bg-[#8f6f44] 
-        text-white rounded-xl 
-        text-lg md:text-xl font-medium 
-        transition-all duration-500 
-        shadow-xl hover:shadow-2xl"
-      whileHover={{ scale: 1.06 }}
-      whileTap={{ scale: 0.97 }}
-    >
-      Try Flooring Customizer
-      <ArrowRight size={22} />
-    </motion.a>
-  </motion.div>
-</section>
       {/*  Furniture Showcase */}
       <section className="relative py-24 md:py-32 lg:py-40 overflow-hidden bg-[#EFE3D3]">
         <div className="absolute inset-0">
@@ -423,22 +452,6 @@ export default function Home() {
                 }
               }}
             >
-              {/* <a
-                href="/furniture"
-                className="
-                  inline-flex items-center gap-3 
-                  px-8 py-4 md:px-10 md:py-5 
-                  bg-[#B08D57]/90 hover:bg-[#B08D57] 
-                  text-white rounded-xl 
-                  text-lg md:text-xl font-medium 
-                  transition-all duration-500 
-                  shadow-xl hover:shadow-2xl hover:scale-[1.04] 
-                  backdrop-blur-sm border border-white/20
-                "
-              >
-                Discover Collections
-                <ArrowRight size={22} className="transition-transform group-hover:translate-x-1" />
-              </a> */}
             </motion.div>
           </motion.div>
         </div>
