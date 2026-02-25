@@ -2,10 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle2, Phone, Zap, MousePointer2 } from "lucide-react";
 import { motion } from "framer-motion";
-import img1 from "../../assets/img1.webp";
-import img2 from "../../assets/img2.webp"
-import img3 from "../../assets/img3.webp";
-import img4 from "../../assets/img4.webp"
+// import img1 from "../../assets/img1.webp";
+// import img2 from "../../assets/img2.webp"
+// import img3 from "../../assets/img3.webp";
+// import img4 from "../../assets/img4.webp"
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -19,9 +19,14 @@ const staggerContainer = {
 
 export default function Laminate() {
   const gallery = [
-    "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800", // Laminate wood
-   img1,img2,img3,img4, // Oak look
-    "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&w=800"  // Pet-friendly
+    //  img1,img2,img3,img4, // Oak look
+    // "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800", // Laminate wood
+    "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&w=800",  // Pet-friendly
+    "https://www.flooringinc.com/media/magefan_blog/2019/10/wide-post.jpg",
+    "https://www.flooringinc.com/media/magefan_blog/2020/11/7800.jpg",
+    "https://e45rntistnk.exactdn.com/wp-content/uploads/2024/07/image-49-1.jpg?strip=all",
+    "https://www.flooringamerica.com/root/clientimages/MF7979WEB/blog/page-280/FAFC%207.16%20Dog-Friendly%20Flooring%20Blog%20Image%201.png?rnd=4034",
+    "https://mcmillanfloors.com/cdn/shop/files/NiobeHerringbone-RS.jpg?v=1740169013",
   ];
 
   return (
@@ -38,7 +43,7 @@ export default function Laminate() {
         className="relative h-[60vh] flex items-center justify-center overflow-hidden"
       >
         <img 
-          src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1920&q=80" 
+          src="https://mcmillanfloors.com/cdn/shop/files/NiobeHerringbone-RS.jpg?v=1740169013" 
           className="absolute inset-0 w-full h-full object-cover" 
           alt="Modern laminate wooden flooring in living room" 
         />
@@ -63,7 +68,7 @@ export default function Laminate() {
             whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
             className="rounded-3xl overflow-hidden shadow-2xl order-2 md:order-1"
           >
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800" alt="Laminate in cozy living room" />
+            <img src="https://www.flooringamerica.com/root/client/MF7979WEB/blog/page-358/empty-big-0-358.jpg?rnd=4518" alt="Laminate in cozy living room" />
           </motion.div>
           <motion.div variants={fadeInUp} className="space-y-8 order-1 md:order-2">
             <h2 className="text-4xl font-serif text-[#3A2F2A]">The Smart Alternative</h2>

@@ -2,8 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Star, ShieldCheck, Truck } from "lucide-react";
-import img3 from "../../assets/img3.webp"
-import img4 from "../../assets/img4.webp"
+// import img3 from "../../assets/img3.webp"
+// import img4 from "../../assets/img4.webp"
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -17,12 +17,12 @@ const staggerContainer = {
 
 export default function Beds() {
   const bedImages = [
-    img3, // Luxury bed
     "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800", // Modern bedroom
-    img4, // Cozy bed
     "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800", // Elegant frame
-    "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?auto=format&fit=crop&w=800", // Designer bed
-    "https://images.unsplash.com/photo-1560448075-bb485b067938?auto=format&fit=crop&w=800"  // Velvet headboard
+    "https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1920&q=80",
+    "https://cdn.prod.website-files.com/6334a8d89862a1cc15eae9e1/65b843b64b52a37a27176907_64dd715e89d024d7aff87471_Cartesian_Install_5_v2.jpeg",
+    "https://cdn.home-designing.com/wp-content/uploads/2018/10/luxury-white-bedroom-decor-1024x768.jpg",
+    "https://media.architecturaldigest.com/photos/67d201e656a30dd3bb8f41af/16:9/w_1280,c_limit/AD0221_VOLPE_7.jpg",
   ];
 
   return (
@@ -37,7 +37,8 @@ export default function Beds() {
         className="relative h-[65vh] flex items-center justify-center overflow-hidden"
       >
         <img 
-          src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1920&q=80" 
+          // src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1920&q=80" 
+          src="https://media.architecturaldigest.com/photos/67bcc8747dfc89b75d51a6ab/16:9/w_2048,h_1152,c_limit/Kishani%20Perera_Point%20Dume%20Project_Photographer%20Anthony%20Barcelo.jpg"
           className="absolute inset-0 w-full h-full object-cover" 
           alt="Luxury designer bed in elegant modern bedroom" 
         />

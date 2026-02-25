@@ -2,8 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle2, Phone, Building2, Shield } from "lucide-react";
 import { motion } from "framer-motion";
-import img2 from "../../assets/img2.webp";
-import img1 from "../../assets/img1.webp";
+// import img2 from "../../assets/img2.webp";
+// import img1 from "../../assets/img1.webp";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -18,11 +18,15 @@ const staggerContainer = {
 export default function Commercial() {
   const gallery = [
     "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800", // Office space
-    img2, // Retail floor
+    // img2, // Retail floor
+    "https://www.lxhausys.com/us/blog/wp-content/uploads/2023/09/cab3e395-568d-44cc-9a43-4418dda02e34_3d-rendering-modern-luxury-hotel-reception-and-lounge.jpg",
     "https://images.unsplash.com/photo-1564069114553-7215e1ff1890?auto=format&fit=crop&w=800", // Commercial installation
-    img1, // High-traffic area
+    // img1, // High-traffic area
+    "https://www.knoll.com/media/635/249/knoll-team-workstations-6.jpg",
     "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800", // Business lobby
-    "https://images.unsplash.com/photo-1621600411688-4be93cd68504?auto=format&fit=crop&w=800"  // Modern commercial
+    // "https://images.unsplash.com/photo-1621600411688-4be93cd68504?auto=format&fit=crop&w=800"  // Modern commercial
+    "https://impeccabuild.com.au/wp-content/uploads/2020/08/Office-Flooring-Ideas-Commercial-Flooring-Ideas-ImpeccaBuild-6-scaled.jpg",
+    "https://impeccabuild.com.au/wp-content/uploads/2020/08/Office-Flooring-Ideas-Commercial-Flooring-Ideas-ImpeccaBuild-3-scaled.jpg",
   ];
 
   return (

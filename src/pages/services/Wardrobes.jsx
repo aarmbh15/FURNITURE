@@ -14,10 +14,12 @@ const staggerContainer = {
 
 export default function Wardrobes() {
   const wardrobeImages = [
-    "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800", // Modern wardrobe
-    "https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=800", // Sliding doors
-    "https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&w=800", // Mirrored wardrobe
-    "https://images.unsplash.com/photo-1544457070-4cd773b4d71e?auto=format&fit=crop&w=800"  // Wooden wardrobe
+    "https://cdn.closetfactory.com/wp-content/smush-webp/2025/05/Custom-Closet-15.jpg.webp",
+    "https://roundhousedesign.com/wp-content/uploads/2024/04/002-LOW_DR_HANIA_WARDROBE_PART_OPEN_LIGHTS-1437x1080.jpg",
+    "https://images.airtasker.com/v7/https://airtasker-seo-assets-prod.s3.amazonaws.com/en_US/1739185782361-built-in-wardrobes.jpg?gravity=smart&w=1600&h=1200",
+    // "https://images.squarespace-cdn.com/content/v1/64c575a42931e477adc7dbcd/20c7334f-37a1-40fe-8422-aea22d3f3859/image+31+%281%29.jpg",
+    "https://cdn-gpmmf.nitrocdn.com/mzZSaCiSXPFVquQPmANpsxbroNXIVoYa/assets/images/optimized/rev-3615dfb/innovative-designs.co.uk/wp-content/uploads/2023/04/Untitled-design-1024x538.png",
+  
   ];
 
   return (
@@ -78,7 +80,7 @@ export default function Wardrobes() {
         variants={fadeInUp}
         className="py-24 bg-white text-center"
       >
-        <h3 className="text-3xl font-serif mb-8 text-[#3A2F2A]">Ready to design your dream bedroom?</h3>
+        <h3 className="text-3xl font-serif mb-8 text-[#3A2F2A]">Ready to design your dream Wardrobe?</h3>
         <a href="/contact" className="bg-[#B08D57] text-white px-12 py-5 rounded-xl font-bold hover:bg-[#8f6f44] transition-all inline-block shadow-lg">Request a Home Design Consultation</a>
       </motion.section>
     </>

@@ -1,8 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import img3 from "../../assets/img3.webp"
-import img4 from "../../assets/img4.webp"
+// import img3 from "../../assets/img3.webp"
+// import img4 from "../../assets/img4.webp"
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -20,7 +20,11 @@ export default function Sofas() {
     "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=800", // Leather sofa
     "https://images.unsplash.com/photo-1550254478-ead40cc54513?auto=format&fit=crop&w=800", // Modern lounge
     "https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=800", // Sectional
-    img3,img4 // Designer sofa
+    "https://m.media-amazon.com/images/I/81Bl2s-X1HL.jpg",
+    "https://www.fcilondon.co.uk/site-assets/blog/content/76891/why-black-leather-sofas-are-a-must-have-for-luxury-interiors.jpg",
+    // "https://www.fcilondon.co.uk/site-assets/blog/content/76891/why-interior-designers-recommend-black-leather-sofas.jpg",
+    "https://www.lunafurn.com/cdn/shop/files/Orsino-4-Seat-Sofa-Luna-Furniture-27468676628534.jpg?v=1768301193&width=1214",
+    
   ];
 
   return (
@@ -49,6 +53,7 @@ export default function Sofas() {
         className="py-24 bg-white px-6"
       >
         <div className="max-w-7xl mx-auto">
+          <motion.h2 variants={fadeInUp} className="text-3xl font-serif text-center mb-16 text-[#3A2F2A]">Our Collection</motion.h2>
           <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
             {sofaImages.map((img, i) => (
               <motion.div

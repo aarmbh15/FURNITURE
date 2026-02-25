@@ -2,9 +2,9 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle2, Phone, Heart, Star } from "lucide-react";
 import { motion } from "framer-motion";
-import img3 from "../../assets/img3.webp";
-import img2 from "../../assets/img2.webp";
-import img1 from "../../assets/img1.webp";
+// import img3 from "../../assets/img3.webp";
+// import img2 from "../../assets/img2.webp";
+// import img1 from "../../assets/img1.webp";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -18,13 +18,17 @@ const staggerContainer = {
 
 export default function Residential() {
   const gallery = [
-  img2, // Local image (replaces 1st)
+  // img2, // Local image (replaces 1st)
+  "https://www.reallycheapfloors.com/media/blog/living_room_flooring_options.jpg",
 
   "https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=800", // Living room
 
   "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800", // Kitchen
 
-  img1, // Local image (replaces 4th)
+  // img1, // Local image (replaces 4th)
+  "https://www.lilyanncabinets.com/media/mageplaza/blog/post/k/i/kitchen_floor_ideas.jpg",
+  "https://www.floorfactors.com/wp-content/uploads/2020/03/large-kitchen-tile_header.jpg",
+  "https://www.flooringcanada.ca/root/client/CX7979WEB/blog/page-207/empty-big-0-207.jpg?rnd=7027",
 
   "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?auto=format&fit=crop&w=800", // Family room
 
@@ -89,11 +93,11 @@ export default function Residential() {
             className="grid grid-cols-2 gap-4"
           >
             <img
-  src={img3}
+  src="https://decormatters-blog-uploads.s3.amazonaws.com/durable_stain_resistant_living_room_d7bb40d50b.webp"
   alt="Cozy home carpet"
   className="rounded-2xl shadow-lg w-full h-auto object-cover"
 />
-            <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=400" className="rounded-2xl shadow-lg mt-8" alt="Modern home flooring" />
+            <img src="https://www.lxhausys.com/us/blog/wp-content/uploads/2023/05/8a10e209-5c6e-4fd1-aa74-9278dc9052e4_1.jpg" className="rounded-2xl shadow-lg mt-8" alt="Modern home flooring" />
           </motion.div>
         </div>
       </motion.section>

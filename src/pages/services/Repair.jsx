@@ -2,29 +2,38 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Phone, Hammer, Sparkles, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
-import img4 from "../../assets/img4.webp"
-import img2 from "../../assets/img2.webp"
+// import img4 from "../../assets/img4.webp"
+// import img2 from "../../assets/img2.webp"
 import img5 from "../../assets/img5.webp"
 
 export default function Repair() {
   const repairGallery = [
+    // {
+    //   // src: img4,
+    //   src:"https://footprintsfloors.com/oak/files/images/refinishing/floor-refinishing-3.jpg",
+    //   title: "Hardwood Resurfacing",
+    //   desc: "Sanding away years of wear"
+    // },
     {
-      src: img4,
-      title: "Hardwood Resurfacing",
-      desc: "Sanding away years of wear"
-    },
+  src: "https://www.reallycheapfloors.com/media/blog/sanding_wooden_floors_with_a_random_orbital_sander_by_hand.jpg",
+  title: "Hardwood Resurfacing",
+  desc: "Sanding away years of wear"
+},
     {
-      src: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800",
+      // src: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800",
+      src:"https://ey2msiqxj7z.exactdn.com/wp-content/uploads/2022/09/13164916/0322_WS_ASK_WestRoxbury_01122022AG_0624-scaled.jpg?strip=all&lossy=1",
       title: "Sectional Replacement",
       desc: "Seamlessly matching old with new"
     },
     {
-      src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800",
+      // src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800",
+      src:"https://www.gandswoodfloors.com/images/_MG_2289.jpg",
       title: "Finishing & Sealing",
       desc: "Protective coating for long-lasting shine"
     },
     {
-      src: img2,
+      // src: img2,
+      src:"https://www.thespruce.com/thmb/Xbf-RvfPIXYlcP-VvFs9I0yympY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SPR-how-to-repair-gaps-between-floorboards-1821671-04-017f922786824a9da4ba9d5198c9b7bf.jpg",
       title: "Board Repair",
       desc: "Fixing gaps and loose planks"
     }
