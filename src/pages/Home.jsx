@@ -52,17 +52,24 @@ const highlights = [
   {
     title: "Timeless Craftsmanship",
     desc: "Hand selected premium woods, rich grains, enduring finishes crafted with precision for lasting beauty and character.",
-    image: "https://images.pexels.com/photos/6585598/pexels-photo-6585598.jpeg?",
+    // image: "https://images.pexels.com/photos/6585598/pexels-photo-6585598.jpeg?",
+    image:"https://worldinteriors.com/cdn/shop/articles/Grassroots.1-885963_1024x1024.jpg?v=1740006939",
+    // image:"https://cdn.mos.cms.futurecdn.net/do8SzcuJxNJFc5HkiKw9Th.jpg",
   },
   {
     title: "Refined Comfort & Style",
     desc: "Sumptuous carpets, warm hardwoods, and luxurious bedroom collections installed to create inviting, elegant living spaces.",
-    image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?",
+    // image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?",
+    image:"https://assets.isu.pub/document-structure/230906194426-a98b3f49cea02b3aa89b25cd08eb0a6e/v1/53c5545d4164ba844b156c883bbbbeaf.jpeg",
+    // image:"https://thumbs.dreamstime.com/b/minimalist-interior-design-modern-living-room-beige-boucle-sofa-ai-generative-420021292.jpg",
+    // image:"https://images.ctfassets.net/wlzmdirin2hy/5ktFOuDWaJlrgYQbxe7kIz/6cf06672221f9b92959c4fd9fa08e5b5/LX_Texas81_HOM_Street_05.jpg?w=3840&q=100",
   },
   {
     title: "Flawless Installation",
     desc: "Precision fitting, perfect transitions, and meticulous attention to every detail professional results you can see and feel.",
-    image: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?",
+    // image: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?",
+    image:"https://bestfloorcoverings.co/wp-content/uploads/2025/07/contentcreationteamkova_Modern_home_interior_with_wide-plank_ha_74c6396b-07bb-40da-9c8b-f24edb8a73ad.webp",
+    // image:"",
   },
 ];
 
@@ -74,7 +81,8 @@ const flooringImages = [
     desc: "Timeless oak and walnut grains"
   },
   {
-    src: "https://nazmiyalantiquerugs.com/wp-content/uploads/2023/04/japandi-style-interior-design-nazmiyal.jpg",
+    // src: "https://nazmiyalantiquerugs.com/wp-content/uploads/2023/04/japandi-style-interior-design-nazmiyal.jpg",
+    src:"https://ey2msiqxj7z.exactdn.com/wp-content/uploads/2014/01/13142157/Carpet_0720-Cape-Ann-Reveal_CapeAnn_022172020JK_0123_Final-1024x683.jpg?strip=all&lossy=1&ssl=1",
     alt: "Plush carpet",
     label: "Plush Carpets",
     desc: "Soft texture and inviting comfort"
@@ -86,19 +94,22 @@ const flooringImages = [
     desc: "Durable and effortlessly elegant"
   },
   {
-    src: "https://images.pexels.com/photos/6707628/pexels-photo-6707628.jpeg?",
+    // src: "https://images.pexels.com/photos/6707628/pexels-photo-6707628.jpeg?",
+    src:"https://cdn.homedit.com/wp-content/uploads/2022/01/Herringbone-Flooring.jpg",
     alt: "Herringbone Oak",
     label: "Herringbone Oak",
     desc: "Classic patterns for modern living"
   },
   {
-    src: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200",
+    // src: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200",
+    src:"https://laminatedepot.co.uk/cdn/shop/files/SmokeGrey-roomscene_1024x.jpg?v=1719692244",
     alt: "Smoked Grey Laminate",
     label: "Smoked Grey Laminate",
     desc: "Sleek, resilient, and versatile"
   },
   {
-    src: "https://images.pexels.com/photos/4846097/pexels-photo-4846097.jpeg?",
+    // src: "https://images.pexels.com/photos/4846097/pexels-photo-4846097.jpeg?",
+    src:"https://www.cormarcarpets.co.uk/media/tyodqyu3/malabar_cormar_influencer_shoot5811_rt_lr.jpg?height=594&width=1082&quality=&mode=Crop&center=0.63267321495491335,0.51127819548872178&bgcolor=fff",
     alt: "Wool Loop Carpet",
     label: "Wool Loop Collection",
     desc: "Natural fibers for high-traffic areas"
@@ -194,7 +205,8 @@ export default function Home() {
     {/* Left Side: Visual Teaser */}
     <div className="w-full md:w-1/2 h-[300px] md:h-[500px] relative">
       <img 
-        src="https://images.unsplash.com/photo-1581850518616-cee81f77a8e8?auto=format&fit=crop&w=1000" 
+        // src="https://images.unsplash.com/photo-1581850518616-cee81f77a8e8?auto=format&fit=crop&w=1000" 
+        src="https://optimise2.assets-servd.host/broadlume-platform/production/images/Flooring_Visualizer_1_596x596.png?w=1200&h=630&q=82&auto=format&fit=crop&dm=1718909415&s=86e7e9c1ea1e4dc7f073cd18f5439594"
         className="w-full h-full object-cover opacity-80"
         alt="Visualizer Preview"
       />
@@ -456,7 +468,53 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+ <section className="relative overflow-hidden bg-gray-900 py-16 sm:py-24">
+      {/* Decorative background blobs */}
+      <div className="absolute top-0 left-0 -ml-20 mt-20 h-64 w-64 rounded-full bg-blue-500/20 blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 -mr-20 mb-20 h-64 w-64 rounded-full bg-purple-500/20 blur-3xl"></div>
 
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2 lg:items-center">
+          
+          {/* Text Content */}
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Exclusive Season Sale is <span className="text-blue-400">Live Now!</span>
+            </h2>
+            <p className="mt-4 text-lg leading-8 text-gray-300">
+              Upgrade your toolkit with our premium features. Don't miss out on this 
+              limited-time opportunity to scale your business faster.
+            </p>
+          </div>
+
+          {/* Offer Card */}
+          <div className="relative flex items-center justify-center">
+            <div className="group relative rounded-3xl bg-white/5 p-8 ring-1 ring-white/10 backdrop-blur-sm transition-all hover:ring-white/20 sm:p-10">
+              <div className="flex flex-col items-center text-center">
+                <span className="rounded-full bg-blue-500/10 px-4 py-1 text-xs font-medium uppercase tracking-wider text-blue-400 ring-1 ring-inset ring-blue-500/20">
+                  Limited Time
+                </span>
+                <div className="mt-6 flex items-baseline gap-x-2">
+                  <span className="text-7xl font-bold tracking-tight text-white">20%</span>
+                  <span className="text-3xl font-semibold text-gray-400 uppercase">Off</span>
+                </div>
+                {/* <p className="mt-4 text-sm leading-6 text-gray-400">
+                  Use code <span className="font-mono font-bold text-white bg-gray-800 px-2 py-1 rounded">SAVE20</span> at checkout.
+                </p> */}
+                
+                {/* Visual Divider */}
+                <div className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-gray-500/50 to-transparent"></div>
+                
+                <p className="mt-8 text-xs text-gray-500 italic">
+                  *Offer valid on all plans until the end of the month.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
       {/* Final CTA */}
       <section className="py-32 bg-[#FBF6F0] text-center px-6">
         <motion.div

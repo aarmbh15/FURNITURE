@@ -28,12 +28,70 @@ export default function About() {
       <section className="py-24 px-6 bg-[#FBF6F0]">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="grid grid-cols-2 gap-4">
-               <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600" className="rounded-2xl shadow-lg mt-8" alt="Detail" />
-               <img src="https://images.unsplash.com/photo-1505693314120-0d443867891c?" className="rounded-2xl shadow-lg" alt="Workshop" />
-               <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=600" className="rounded-2xl shadow-lg -mt-8" alt="Flooring" />
-               <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?" className="rounded-2xl shadow-lg" alt="LVT Detail" />
-            </div>
+            {/* <div className="grid grid-cols-2 gap-4"> */}
+               {/* <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600" className="rounded-2xl shadow-lg mt-8" alt="Detail" /> */}
+               {/* <img src="https://blog.canadianloghomes.com/wp-content/uploads/2020/10/modern-rustic-living-room-ideas-3.jpg" className="rounded-2xl shadow-lg mt-8" alt="Detail" /> */}
+               {/* <img src="https://images.unsplash.com/photo-1505693314120-0d443867891c?" className="rounded-2xl shadow-lg" alt="Workshop" /> */}
+               {/* <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=600" className="rounded-2xl shadow-lg -mt-8" alt="Flooring" /> */}
+               {/* <img src="https://media.architecturaldigest.com/photos/67bcc8747dfc89b75d51a6ab/16:9/w_2048,h_1152,c_limit/Kishani%20Perera_Point%20Dume%20Project_Photographer%20Anthony%20Barcelo.jpg" className="rounded-2xl shadow-lg " alt="Flooring" /> */}
+               {/* <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?" className="rounded-2xl shadow-lg" alt="LVT Detail" /> */}
+            {/* </div> */}
+
+            {/* <div className="grid grid-cols-2 gap-4">
+  <img 
+    src="https://blog.canadianloghomes.com/wp-content/uploads/2020/10/modern-rustic-living-room-ideas-3.jpg" 
+    className="rounded-2xl shadow-lg mt-8 col-start-2" 
+    alt="Warm living room with hardwood floors" 
+  />
+
+  <img 
+    src="https://images.unsplash.com/photo-1505693314120-0d443867891c?" 
+    className="rounded-2xl shadow-lg" 
+    alt="Close-up rich wood flooring texture" 
+  />
+
+  <img 
+    src="https://media.architecturaldigest.com/photos/67bcc8747dfc89b75d51a6ab/16:9/w_2048,h_1152,c_limit/Kishani%20Perera_Point%20Dume%20Project_Photographer%20Anthony%20Barcelo.jpg" 
+    className="rounded-2xl shadow-lg mt-4 col-start-2" 
+    alt="Professional installer laying hardwood" 
+  />
+
+  <img 
+    src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?" 
+    className="rounded-2xl shadow-lg mt-6" 
+    alt="Serene bedroom with herringbone wood floor" 
+  />
+</div> */}
+
+<div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 auto-rows-fr">
+  {/* Large featured image taking more vertical space – great hero shot */}
+  <img 
+    src="https://blog.canadianloghomes.com/wp-content/uploads/2020/10/modern-rustic-living-room-ideas-3.jpg" 
+    className="rounded-2xl shadow-xl object-cover w-full h-full row-span-2 col-span-2 md:col-span-1" 
+    alt="Warm living room with luxurious hardwood floors" 
+  />
+
+  {/* Close-up texture – square-ish feel */}
+  <img 
+    src="https://images.unsplash.com/photo-1505693314120-0d443867891c?" 
+    className="rounded-2xl shadow-lg object-cover w-full h-full" 
+    alt="Close-up rich wood flooring texture and grain detail" 
+  />
+
+  {/* Installer at work – medium height */}
+  <img 
+    src="https://media.architecturaldigest.com/photos/67bcc8747dfc89b75d51a6ab/16:9/w_2048,h_1152,c_limit/Kishani%20Perera_Point%20Dume%20Project_Photographer%20Anthony%20Barcelo.jpg" 
+    className="rounded-2xl shadow-lg object-cover w-full h-full md:row-span-2" 
+    alt="Professional installer carefully laying premium hardwood flooring" 
+  />
+
+  {/* Serene bedroom – fills the remaining space nicely */}
+  <img 
+    src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?" 
+    className="rounded-2xl shadow-lg object-cover w-full h-full col-span-2 md:col-span-1 md:row-span-2" 
+    alt="Serene modern bedroom featuring elegant herringbone wood floor pattern" 
+  />
+</div>
             
             <div className="space-y-6">
               <h2 className="text-4xl font-serif text-[#3A2F2A]">A Legacy of Craftsmanship</h2>
@@ -108,7 +166,7 @@ export default function About() {
           </div>
         </div>
       </section>
-
+ 
       {/* Call to Action */}
       <section className="py-24 text-center">
         <h3 className="text-3xl font-serif mb-8 text-[#3A2F2A]">Experience the AK Difference</h3>

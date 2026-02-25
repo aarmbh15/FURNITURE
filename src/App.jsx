@@ -5,7 +5,8 @@ import { HelmetProvider } from "react-helmet-async";
 // Components
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import ScrollToTop from "./components/ScrollToTop"; // Ensure this file exists in your components folder
+import ScrollToTop from "./components/ScrollToTop";
+// import OfferSection from './components/OfferSection'; // Ensure this file exists in your components folder
 
 // Pages
 import Home from "./pages/Home";
