@@ -22,8 +22,10 @@ export default function Laminate() {
     //  img1,img2,img3,img4, // Oak look
     // "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800", // Laminate wood
     "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?auto=format&fit=crop&w=800",  // Pet-friendly
-    "https://www.flooringinc.com/media/magefan_blog/2019/10/wide-post.jpg",
-    "https://www.flooringinc.com/media/magefan_blog/2020/11/7800.jpg",
+    // "https://www.flooringinc.com/media/magefan_blog/2019/10/wide-post.jpg",
+    // "https://www.flooringinc.com/media/magefan_blog/2020/11/7800.jpg",
+    "https://www.factoryflooringliquidators.com/cdn/shop/articles/1_d627d0ef-c5ac-49eb-a0c9-325377c8935c.jpg?v=1650480768",
+    "https://e45rntistnk.exactdn.com/wp-content/uploads/2025/01/types-of-flooring-section-2.png?strip=all&fit=800%2C600",
     "https://e45rntistnk.exactdn.com/wp-content/uploads/2024/07/image-49-1.jpg?strip=all",
     "https://www.flooringamerica.com/root/clientimages/MF7979WEB/blog/page-280/FAFC%207.16%20Dog-Friendly%20Flooring%20Blog%20Image%201.png?rnd=4034",
     "https://mcmillanfloors.com/cdn/shop/files/NiobeHerringbone-RS.jpg?v=1740169013",
